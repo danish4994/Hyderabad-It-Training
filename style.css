@@ -1,0 +1,422 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "josefin sans";
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.top-bar{
+    width: 100%;
+    height: 38px;
+    background-color: #3A8106;
+}
+
+.top-bar .container i{
+    color: #fff;
+}
+.top-bar .container a{
+    color: #fff;
+    text-decoration: none;
+}
+.top-bar .container p{
+    color: #fff;
+    display: inline-block;
+}
+
+#dull1{
+    position: relative;
+    left: 50px;
+}
+#dull{
+opacity: 0.7;
+position: relative;
+right: 80px;
+
+}
+.top-bar .container i:hover{
+    color: #FFC600;
+}
+
+
+#active{
+    color: #FFC600;
+}
+#mynav ul li a{
+    font-size: 19px;
+    transition: 800ms;
+}
+
+#mynav ul li a:hover{
+    color: #FFC600;
+}
+
+#navbar{
+    position: sticky;
+    top:0;
+    z-index: 123;
+    background-color: #fff;
+}
+/* navigation part end here */
+
+.whatsapp{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #3A8106;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 42px;
+    z-index: 1;
+    position: fixed;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+.whatsapp a{
+    font-size: 22px;
+    color: white;
+}
+/* welcome part start from here */
+
+span{
+    color: #B71710;
+}
+
+
+#content h1{
+    font-size: 27px !important;
+}
+
+#content p{
+    text-align: justify;
+    
+    line-height: 30px;
+    font-weight: 360;
+    font-size: 15.5px !important;
+}
+
+#form{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+#form h1{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A8106;
+    color: #fff;
+    font-size: 28px;
+}
+#form input{
+    outline: none !important;
+    margin: auto;
+    width: 80%;
+    border: 1px solid gray;
+}
+.row > *{
+    padding: 0;
+}
+#textarea{
+    margin: auto;
+    width: 80%;
+    height: 80px;
+    border: 1px solid gray;
+}
+
+#btnn{
+    height: 40px;
+    background-color: #FFC600;
+    color: #fff;
+    padding: 0;
+    font-size: 20px;
+    border: none !important;
+    transition: 800ms;
+}
+#btnn:hover{
+    background-color: #07294D;
+    color: #FFC600;
+}
+
+/* welcome part end here */
+
+
+/* course part start here */
+
+#courses-part{
+    background-color: #CECECE;
+}
+#courses-part img{
+    width: 100%;
+    border-top-right-radius: 5px ;
+    border-top-left-radius: 5px;
+    transition: 800ms;
+
+}
+.single-course{
+    width: 100%;
+    padding: 15px;
+}
+.image{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.thum{
+    width: 100% !important;
+}
+#courses-part h4{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    font-size: 16px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+    transition: 800ms;
+}
+
+#courses-part a{
+    text-decoration: none;
+    color: #000;
+}
+#courses-part img:hover{
+    transform: scale(1.1);
+}
+#courses-part h4:hover{
+    color: #3A8106;
+}
+
+
+
+
+/* table part start from here */
+
+
+#table table tr th{
+    background-color: #002147;
+    color: #fff;
+}
+#table table tr a{
+    text-decoration: none;
+    color: #FF0000;
+}
+/* table part end here */
+
+
+/* training part start from here */
+
+#training{
+    background-color: #CFCFCF;
+}
+
+#training figure img{
+    width: 25%;
+}
+#training figure {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin:10px 10px ;
+}
+#training figure figcaption h2{
+    font-size: 25px;
+    text-wrap: nowrap;
+}
+#training figure figcaption h4{
+    font-size: 16px;
+}
+
+/* training part end from here */
+
+#choose p{
+    text-align: justify;
+}
+
+
+
+#bg{
+    background-image: url(assests/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bg-color{
+    width: 100%;
+    height: 100%;
+    background-color: #002147c6;
+}
+
+#bg i {
+    color: #fff;
+    font-size: 50px;
+}
+#bg p{
+    color: #fff;
+}
+#bg h2{
+    color: #FFC600;
+}
+
+
+/* review part start from here */
+
+#review p{
+    text-align: justify !important;
+}
+#review p:last-child{
+    text-align: end !important;
+}
+#review .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#review p{
+    cursor: pointer;
+
+}
+/* review part end from here */
+
+
+
+
+/* placement part start from here */
+#placement{
+    width: 100%;
+    background-color: #EDF0F2;
+}
+
+#placement img{
+   
+    box-shadow: 1px 0px 9px 5px #f1c095;
+}
+
+
+
+/* placement part end from here */
+
+
+/* approach part start from here */
+#approach{
+    background-color: #fff;
+}
+
+#approach figure img{
+    width: 40%;
+}
+#approach figure {
+    overflow: hidden;
+    background-color: #E9E9E9;
+    border-radius: 10px;
+    padding: 20px;
+    margin:10px 10px ;
+}
+#approach figure figcaption h2{
+    font-size: 25px;
+    text-wrap: nowrap;
+}
+#approach #img-size{
+    width: 66%;
+}
+/* approach part end from here */
+
+
+/* placement-company part start from here */
+#placement-company{
+    background-color: #EDF0F2;
+}
+#placement-company h4{
+    color: #fff;
+    text-wrap: nowrap;
+
+}
+#placement-company .red{
+    background-color: #DC3545;
+    padding: 10px;
+}
+#placement-company .green{
+    background-color: #28A745;
+    padding: 10px;
+}
+#placement-company .blue{
+    background-color: #17A2B8;
+    padding: 10px;
+}
+#placement-company .grey{
+    background-color: #6C757D;
+    padding: 10px;
+}
+
+/* placement-company part end from here */
+
+/* footer part start from here */
+
+#foot{
+    background-color: #3A8106;
+    color: white;
+}
+#foot p{
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 30px;
+}
+#foot a{
+    display: block !important;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    padding-left: 20px;
+    text-wrap: nowrap;
+    transition: 800ms
+}
+#foot a:hover{
+    transform: translateX(10px);
+}
+
+#foot i{
+    color: #FFC600;
+    margin-top: 20px;
+}
+#foot .sociall{
+    display: flex;
+}
+#foot h6{
+    margin-top: 20px;
+    padding: 0px 10px;
+    text-wrap: nowrap;
+}
+
+
+#copy-right{
+    background-color: #285803;
+}
+#copy-right h6{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+    #topbar{
+        opacity: 0;
+        display: none !important;
+    }
+}
