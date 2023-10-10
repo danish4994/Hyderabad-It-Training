@@ -381,6 +381,7 @@ span{
 }
 #foot a:hover{
     transform: translateX(10px);
+    color: #FFC600;
 }
 
 #foot i{
