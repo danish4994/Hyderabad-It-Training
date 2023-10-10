@@ -63,7 +63,7 @@ right: 80px;
 
 /* breadcrumb part start here */
 #breadcrum{
-    background: url(/assests/breadcrumb.jpg) center no-repeat ;
+    background: url(assests/breadcrumb.jpg) center no-repeat ;
     background-size: cover;
     padding: 0;
 }
