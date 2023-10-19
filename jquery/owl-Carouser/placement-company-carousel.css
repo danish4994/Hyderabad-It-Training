@@ -1,0 +1,190 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+.placement-company,
+.placement-company .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+.placement-company {
+  display: none;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+} 
+.placement-company h2{
+  font-size: 1.2rem;
+  padding: 15px 0px !important;
+}
+.placement-company .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+}
+.placement-company .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.placement-company .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.placement-company .owl-item,
+.placement-company .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+.placement-company .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+.placement-company .owl-item img {
+  display: block;
+  width: 100%;
+}
+.placement-company .owl-dots.disabled,
+.placement-company .owl-nav.disabled {
+  display: none;
+}
+.no-js .placement-company,
+.placement-company.owl-loaded {
+  display: block;
+}
+.placement-company .owl-dot,
+.placement-company .owl-nav .owl-next,
+.placement-company .owl-nav .owl-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.placement-company .owl-nav button.owl-next,
+.placement-company .owl-nav button.owl-prev,
+.placement-company button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+.placement-company.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.placement-company.owl-hidden {
+  opacity: 0;
+}
+.placement-company.owl-refresh .owl-item {
+  visibility: hidden;
+}
+.placement-company.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.placement-company.owl-grab {
+  cursor: move;
+  cursor: grab;
+}
+.placement-company.owl-rtl {
+  direction: rtl;
+}
+.placement-company.owl-rtl .owl-item {
+  float: right;
+}
+.placement-company .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.placement-company .owl-animated-in {
+  z-index: 0;
+}
+.placement-company .owl-animated-out {
+  z-index: 1;
+}
+.placement-company .fadeOut {
+  animation-name: fadeOut;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.owl-height {
+  transition: height 0.5s ease-in-out;
+}
+.placement-company .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.placement-company .owl-item .owl-lazy:not([src]),
+.placement-company .owl-item .owl-lazy[src^=""] {
+  max-height: 0;
+}
+.placement-company .owl-item img.owl-lazy {
+  transform-style: preserve-3d;
+}
+.placement-company .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+.placement-company .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.1s ease;
+}
+.placement-company .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+.placement-company .owl-video-playing .owl-video-play-icon,
+.placement-company .owl-video-playing .owl-video-tn {
+  display: none;
+}
+.placement-company .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 0.4s ease;
+}
+.placement-company .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}

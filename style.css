@@ -48,6 +48,7 @@ right: 80px;
 #mynav ul li a{
     font-size: 19px;
     transition: 800ms;
+    color: #000000c1;
 }
 
 #mynav ul li a:hover{
@@ -57,7 +58,7 @@ right: 80px;
 #navbar{
     position: sticky;
     top:0;
-    z-index: 123;
+    z-index: 999;
     background-color: #fff;
 }
 /* navigation part end here */
@@ -72,7 +73,7 @@ right: 80px;
     align-items: center;
     position: absolute;
     bottom: 42px;
-    z-index: 1;
+    z-index: 999;
     position: fixed;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
@@ -105,6 +106,10 @@ span{
     overflow: hidden;
     background-color: #fff;
 }
+form{
+    padding: 0px 40px;
+}
+
 #form h1{
     width: 100%;
     height: 50px;
@@ -117,16 +122,12 @@ span{
 }
 #form input{
     outline: none !important;
-    margin: auto;
-    width: 80%;
     border: 1px solid gray;
 }
 .row > *{
     padding: 0;
 }
 #textarea{
-    margin: auto;
-    width: 80%;
     height: 80px;
     border: 1px solid gray;
 }
@@ -143,6 +144,12 @@ span{
 #btnn:hover{
     background-color: #07294D;
     color: #FFC600;
+}
+#usererror , #emailerror , #mobileerror , #messageerror{
+    color: red;
+    font-size: 12px;
+    position: relative;
+    bottom:10px;
 }
 
 /* welcome part end here */
@@ -266,12 +273,15 @@ span{
 #bg h2{
     color: #FFC600;
 }
-
+.count{
+    color: #FFC600;
+}
 
 /* review part start from here */
 
 #review p{
     text-align: justify !important;
+    line-height: 30px;
 }
 #review p:last-child{
     text-align: end !important;
@@ -404,8 +414,6 @@ span{
 #copy-right h6{
     color: #fff;
 }
-
-
 
 
 

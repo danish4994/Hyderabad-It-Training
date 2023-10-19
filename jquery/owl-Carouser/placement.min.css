@@ -1,0 +1,184 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+.placements,
+.placements .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+.placements {
+  display: none;
+  width: 100%;
+  z-index: 1;
+}
+.placements .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+}
+.placements .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.placements .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.placements .owl-item,
+.placements .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+.placements .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+.placements .owl-item img {
+  display: block;
+  width: 100%;
+}
+.placements .owl-dots.disabled,
+.placements .owl-nav.disabled {
+  display: none;
+}
+.no-js .placements,
+.placements.owl-loaded {
+  display: block;
+}
+.placements .owl-dot,
+.placements .owl-nav .owl-next,
+.placements .owl-nav .owl-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.placements .owl-nav button.owl-next,
+.placements .owl-nav button.owl-prev,
+.placements button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+.placements.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.placements.owl-hidden {
+  opacity: 0;
+}
+.placements.owl-refresh .owl-item {
+  visibility: hidden;
+}
+.placements.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.placements.owl-grab {
+  cursor: move;
+  cursor: grab;
+}
+.placements.owl-rtl {
+  direction: rtl;
+}
+.placements.owl-rtl .owl-item {
+  float: right;
+}
+.placements .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.placements .owl-animated-in {
+  z-index: 0;
+}
+.placements .owl-animated-out {
+  z-index: 1;
+}
+.placements .fadeOut {
+  animation-name: fadeOut;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.owl-height {
+  transition: height 0.5s ease-in-out;
+}
+.placements .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.placements .owl-item .owl-lazy:not([src]),
+.placements .owl-item .owl-lazy[src^=""] {
+  max-height: 0;
+}
+.placements .owl-item img.owl-lazy {
+  transform-style: preserve-3d;
+}
+.placements .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+.placements .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.1s ease;
+}
+.placements .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+.placements .owl-video-playing .owl-video-play-icon,
+.placements .owl-video-playing .owl-video-tn {
+  display: none;
+}
+.placements .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 0.4s ease;
+}
+.placements .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}

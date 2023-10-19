@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="jquery/owl-Carouser/owl.carousel.min.css">
+    <link rel="stylesheet" href="jquery/owl-Carouser/owl.theme.default.min.css">
+    <link rel="stylesheet" href="jquery/owl-Carouser/placement.min.css">
+    <link rel="stylesheet" href="jquery/owl-Carouser/placement-company-carousel.css">
+    
   </head>
 
 
@@ -115,7 +120,7 @@
 <section class="container-fluid bg-light">
       <div class="container pt-5">
         <div class="row mx-md-5">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 ps-4 pe-4" id="content">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 pe-md-3" id="content">
             <h1 class="mb-3">Welcome to <span class="color    ">Hyderabad IT Trainings </span> </h1>
           <p class="mb-4">
             Hyderabad IT Trainings is a Hyderabad based Training Institute
@@ -143,11 +148,15 @@
           
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 mb-5" id="form" >
             <h1>Register</h1>
-              <form action="">
-                <input type="text" placeholder="Name" required class="form-control mb-3 p-3">
-                <input type="email" placeholder="Email" required class="form-control mb-3 p-3">
-                <input type="tel" placeholder="Phone" required maxlength="10" class="form-control mb-3 p-3">
-                <textarea name="" id="textarea" cols="30" rows="10" placeholder="Message" required class="form-control mb-4"></textarea>
+              <form action="" onsubmit="return validation()">
+                <input type="text" placeholder="Name" id="username" class="form-control mb-3 p-3">
+                <div id="usererror"></div>
+                <input type="email" placeholder="Email" id="email" class="form-control mb-3 p-3">
+                <div id="emailerror"></div>
+                <input type="tel" placeholder="Phone" id="mobile" maxlength="10" class="form-control mb-3 p-3">
+                <div id="mobileerror"></div>
+                <textarea name="" id="textarea" cols="30" rows="10" placeholder="Message" class="form-control mb-3"></textarea>
+                <div id="messageerror"></div>
                 <input id="btnn" type="submit" class="form-control mb-4">
               </form>
           </div>
@@ -402,8 +411,8 @@
 
 <section class="container mb-5" id="table">
     <div class="row mx-md-5">
+        <h3 class="text-center pt-4 pb-4">New <span class="color"> Batches </span></h3>
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 table-responsive">
-          <h3 class="text-center pt-4 pb-4">New <span class="color"> Batches </span></h3>
          <table class="table table-hover table-bordered">
         <tr>
             <th class="p-3">Course</th>
@@ -576,22 +585,22 @@
             <div class="row mx-md-5 text-center">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <i class="fa fa-user"></i>
-                    <h2>15+</h2>
+                    <h2 ><span class="count">15</span>+</h2>
                     <p>No. of Courses</p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <i class="fa fa-user"></i>
-                    <h2>31,000+</h2>
+                    <h2 ><span class="count">31,000</span>+</h2>
                     <p>No. of Students</p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <i class="fa fa-user"></i>
-                    <h2>25,000+</h2>
+                    <h2 ><span class="count">25,000</span>+</h2>
                     <p>No. of Placement</p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <i class="fa fa-user"></i>
-                    <h2>39,000+</h2>
+                    <h2 ><span class="count">39,000</span>+</h2>
                     <p>No. of Registrations</p>
                 </div>
             </div>
@@ -603,92 +612,66 @@
 
 <!-- review part start from here -->
 
-<section class="container py-5" id="review">
-    <h2 class="text-center">Students <span class="color">What they say</span></h2>
-    
-    <div class="carousel slide rounded-circle pb-5" id="slide" data-bs-ride="carousel">
-        <div class="carousel-indicators my-3 ">
-            <li data-bs-target="#slide" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="First slide"></li>
-            <li data-bs-target="#slide" data-bs-slide-to="1" aria-label="Second slide" class="bg-dark"></li>
-            <li data-bs-target="#slide" data-bs-slide-to="2" aria-label="Third slide" class="bg-dark"></li>
-            <li data-bs-target="#slide" data-bs-slide-to="3" aria-label="Forth slide" class="bg-dark"></li>
+
+  <section class="container py-5" id="review">
+    <div class="row mx-md-5 px-3">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <p>I have joined Hyderabad IT taining for fullstack web development course.
+                    I was happy to joined there because of well teaching and good staff. 
+                    And they are friendly too u can clear your doubts without hesitation.
+                    Thank u so much chandra shekhar sir for your support
+                </p>
+                <p>Mohammad Khalida Parveen</p>
+            </div>
+            <div class="item">
+                <p>One of the best institution for python training. Good faculties and environment. 
+                    The python trainer Mr.Sudheer sir is a good trainer with lively attitude. 
+                    He explains the subject with live example and experiences. I'm happy to be 
+                    trained here thank you Hyderabad IT trainings.
+                </p>
+                <p>Prasad Hari</p>
+            </div>
+            <div class="item">
+                <p>I had a good experience here. I did ui development course and gained a very good knowledge.
+                    Mr.Chandra Shekar sir was always there to help and had given many ideas and tips.I would
+                     recommend people to join here as it even has the brand value. And the staff working here
+                      are always welcoming and helpful. Thanks to Hyderabad IT trainings.
+               </p>
+               <p>Swetha thamatam</p>
+            </div>
+            <div class="item">
+                <p>Hyderabad IT training is the best institute for the courses and has good experienced trainers 
+                    will guide very effective with friendly communication. As I did python fullstack course and got
+                     good experience and good knowledge.Thanks to Hyderabad IT trainings.
+                </p>
+                <p>Praveen Ronanki</p>
+            </div>
+            <div class="item">
+                <p>I Joined for ui development course. My learning experience with Hyderabad IT traininings 
+                    has been excellent. The instructor was very knowledgeable and helpful.The Infrastructure 
+                    and placement assistance were also good. I would strongly recommend Hyderabad IT trainings.
+                </p>
+                <p>Jagadeesh Jana</p>
+            </div>
+            <div class="item">
+                <p>Hyderabad IT trainings is a very good institute to learn software development technologies.
+                    Our trainer Mr.chandra shekar sir, he is a best trainer and helps every student during the course.
+                     we got to practice and code daily with sir.
+               </p>
+               <p>Anwesh Indeepjoy</p>
+            </div>
+            <div class="item">
+                <p>I have joined Hyderabad IT taining for fullstack web development course.I was happy to 
+                    joined there because of well teaching and good staff. And they are friendly too u can 
+                    clear your doubts without hesitation.Thank u so much chandra shekhar sir for your support .........😇
+                </p>
+                <p>Mohammad Khalida Parveen</p>
+            </div>
             
         </div>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                   <div class="row mx-md-5">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                            <p>I have joined Hyderabad IT taining for fullstack web development course.
-                                I was happy to joined there because of well teaching and good staff. 
-                                And they are friendly too u can clear your doubts without hesitation.
-                                Thank u so much chandra shekhar sir for your support
-                            </p>
-                            <p>Mohammad Khalida Parveen</p>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                            <p>One of the best institution for python training. Good faculties and environment. 
-                                The python trainer Mr.Sudheer sir is a good trainer with lively attitude. 
-                                He explains the subject with live example and experiences. I'm happy to be 
-                                trained here thank you Hyderabad IT trainings.
-                            </p>
-                            <p>Prasad Hari</p>
-                        </div>
-                   </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="row mx-md-5">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                        <p>I had a good experience here. I did ui development course and gained a very good knowledge.
-                             Mr.Chandra Shekar sir was always there to help and had given many ideas and tips.I would
-                              recommend people to join here as it even has the brand value. And the staff working here
-                               are always welcoming and helpful. Thanks to Hyderabad IT trainings.
-                        </p>
-                        <p>Swetha thamatam</p>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                        <p>Hyderabad IT training is the best institute for the courses and has good experienced trainers 
-                            will guide very effective with friendly communication. As I did python fullstack course and got
-                             good experience and good knowledge.Thanks to Hyderabad IT trainings.
-                        </p>
-                        <p>Praveen Ronanki</p>
-                    </div>
-               </div>
-            </div>
-            
-            <div class="carousel-item">
-                <div class="row mx-md-5">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                        <p>I Joined for ui development course. My learning experience with Hyderabad IT traininings 
-                            has been excellent. The instructor was very knowledgeable and helpful.The Infrastructure 
-                            and placement assistance were also good. I would strongly recommend Hyderabad IT trainings.
-                        </p>
-                        <p>Jagadeesh Jana</p>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                        <p>Hyderabad IT trainings is a very good institute to learn software development technologies.
-                             Our trainer Mr.chandra shekar sir, he is a best trainer and helps every student during the course.
-                              we got to practice and code daily with sir.
-                        </p>
-                        <p>Anwesh Indeepjoy</p>
-                    </div>
-               </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="row mx-md-5">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                        <p>I have joined Hyderabad IT taining for fullstack web development course.I was happy to 
-                            joined there because of well teaching and good staff. And they are friendly too u can 
-                            clear your doubts without hesitation.Thank u so much chandra shekhar sir for your support .........😇
-                        </p>
-                        <p>Mohammad Khalida Parveen</p>
-                    </div>
-                    
-        </div>
-        
     </div>
-</section>
+  </section>
 
 <!-- review part end from here -->
 
@@ -696,47 +679,35 @@
 
 <section class="container-fluid pb-4" id="placement">
     <div class="container pt-4">
-        <h2 class="text-center">Recent<span class="color">Placement</span></h2>
-        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-            <div class="">
-                <div data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></div>
-                <div data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></div>
-            </div>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="row mx-md-5">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN%20(1)-min.jpg" alt="">
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN%20(2)-min.jpg" alt="">
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN%20(3)-min.jpg" alt="">
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN-min.jpg" alt="">
-                        </div>
-                    </div>
+        <h2 class="text-center py-3">Recent<span class="color"> Placement</span></h2>
+        <div class="row mx-md-5">
+            <div class="placements">
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN%20(1)-min.jpg" alt="">
                 </div>
-                <div class="carousel-item">
-                    <div class="row mx-md-5">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(1)%20(1)-min.jpg" alt="">
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(2)%20(1)-min.jpg" alt="">
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(3)%20(1)-min.jpg" alt="">
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-                            <img class="img-fluid" src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(4)%20(1)-min.jpg" alt="">
-                        </div>
-                    </div>
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN%20(2)-min.jpg" alt="">
                 </div>
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN%20(3)-min.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/hydIT%20PLACEMENT%20OPEN-min.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(1)%20(1)-min.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(2)%20(1)-min.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(3)%20(1)-min.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://hyderabadittrainings.com/images/placement/placement%20open3%20(4)%20(1)-min.jpg" alt="">
+                </div>
+                
             </div>
-            
         </div>
     </div>
 </section>
@@ -821,35 +792,164 @@
 
 <!-- placement-company part end from here -->
 
-<section class="container-fluid" id="placement-company">
-    <div class="container pt-4">
-        <h2 class="text-center">Our Students <span class="color">Placed In</span></h2>
-    <div class="row mx-md-5 py-3">
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mx-auto">
-            <div class=" red my-2">
-                <h4 class="text-center mt-3">SMT Solution</h4>
+<section class="container-fluid pt-5" id="placement-company">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Students <span class="color">Placed In</span></h2>
+    <div class="row mx-md-5 ">
+        <div class="placement-company">
+                <div class="item">
+                    <h2 class="green">HCL</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">TCS</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">Wipro</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">HP</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">CGI</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">CSC</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">Ebix</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">Amazon</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">Google</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">Genpact</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">Invesco</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">Marlabs</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">PAREXEL</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">C2D SOFT</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">RealPage</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">Cyient</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">Medlinks</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">Mindtree</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">Virinchi</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">Accenture</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">BroadEdge</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">TCS</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">Capgemini</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">Conginzant</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">Connectfix</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">Mindlance</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">HTC India</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">Valuelabs</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">Vinnasoft</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">TDK Global</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">Ust Global</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">GlobalLogic</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">Newt Global</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">Sage IT INC</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">IVY Comptech</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">SLK Software</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">ES Technology</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">SMT Solutions</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">CSE Technology</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">JPMorgan Chase</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">Nevio Solutions</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">Knoah Solutions</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">Sysco Infotech</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">Thomson Reuters</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">EDS Technologies</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">Matrix Solutions</h2>
+                </div>
+                <div id="item">
+                    <h2 class="blue">SJS Technologies</h2>
+                </div>
+                <div id="item">
+                    <h2 class="grey">TOA Technologies</h2>
+                </div>
+                <div class="item">
+                    <h2 class="green">Ivis Technologies</h2>
+                </div>
+                <div id="item">
+                    <h2 class="red">Navayuga Infotech</h2>
+                </div>
+
             </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mx-auto">
-                <div class=" green my-2">
-                    <h4 class="text-center mt-3">EDS Technology</h4>
-                </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mx-auto">
-                <div class=" blue my-2" >
-                    <h4 class="text-center mt-3">Sysco Infotech</h4>
-                </div>
-         </div>
-         <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mx-auto">
-                <div class=" grey my-2">
-                    <h4 class="text-center mt-3">Thomson Reuters</h4>
-                </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 mx-auto">
-            <div class=" green my-2">
-                <h4 class="text-center mt-3">Ivis Technologies</h4>
-            </div>
-    </div>
+
         </div>
     </div>
     </div>
@@ -922,6 +1022,15 @@
 
 
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="jquery/owl-Carouser/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+ integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+  integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
 
 
 <script src="js/bootstrap.bundle.js"></script>
