@@ -122,25 +122,29 @@
           <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
             <div id="form-bg">
               <h4>Quick Enquiry</h4>
-              <form action="">
+              <form action="" onsubmit="return validation()">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="single-form form-group pe-md-2">
                       <input
+                        id="username"
                         type="text"
                         placeholder="Your Name"
                         class="form-control"
                       />
                     </div>
+                    <div id="usererror"></div>
                   </div>
                   <div class="col-md-6">
                     <div class="single-form form-group">
                       <input
+                        id="email"
                         type="email"
                         placeholder="Email"
                         class="form-control"
                       />
                     </div>
+                    <div id="emailerror"></div>
                   </div>
                   <div class="col-md-6">
                     <div class="single-form form-group pe-md-2">
@@ -154,27 +158,30 @@
                   <div class="col-md-6">
                     <div class="single-form form-group">
                       <input
+                        id="mobile"
                         type="tel"
                         placeholder="Phone"
-                        class="form-control"
+                        class="form-control "
                       />
                     </div>
+                    <div id="mobileerror"></div>
                   </div>
                   <div class="col-md-12">
                     <div class="single-form form-group">
                       <textarea
                         name=""
-                        id=""
+                        id="textarea"
                         cols="30"
                         rows="10"
                         placeholder="Message"
-                        class="form-control"
+                        class="form-control mb-3"
                       ></textarea>
                     </div>
+                    <div id="messageerror"></div>
                   </div>
                   <div class="col-md-12">
                     <div class="single-form">
-                      <button type="submit" class="main-btn disabled">
+                      <button type="submit" class="main-btn">
                         Send
                       </button>
                     </div>
@@ -300,6 +307,75 @@
     </section>
 
     <script src="js/bootstrap.bundle.js"></script>
+
+    <script>
+      
+    function validation(){
+    let username = document.getElementById("username").value
+    let email = document.getElementById("email").value
+    let mobile = document.getElementById("mobile").value
+    let message = document.getElementById("textarea").value
+    let usernameStatus = false;
+    let emailStatus = false;
+    let mobileStatus = false;
+    let messageStatus = false;
+    let CharExp = /^[a-zA-Z]+$/
+    let numExp = /^[0-9]+$/
+       
+    if(username === ""){
+        document.getElementById("usererror").innerHTML = "Please Enter Name *";
+        }else{
+           if(username.match(CharExp)){
+            document.getElementById("usererror").innerHTML = "";
+            usernameStatus = true;
+           }else{
+            document.getElementById("usererror").innerHTML = "Please Enter Characters Only *";
+           }
+        }
+
+    if(email === ""){
+        document.getElementById("emailerror").innerHTML = "please Enter Email Id *"
+        }else{
+        document.getElementById("emailerror").innerHTML = ""
+        emailStatus = true;
+    }
+
+    if(mobile === ""){
+        document.getElementById("mobileerror").innerHTML = "Please Enter Mobile Number *"
+        }else{
+        if(mobile.match(numExp)){
+            if(mobile.length == 10){
+                document.getElementById("mobileerror").innerHTML = ""
+                mobileStatus =true;
+            }else{
+                document.getElementById("mobileerror").innerHTML = "Please Enter 10 Digit Mobile Number *"
+            }
+        }else{
+            document.getElementById("mobileerror").innerHTML = "Please Enter Numbers Only *"
+        }
+    }
+
+    if(message === ""){
+        document.getElementById("messageerror").innerHTML = "Please , leave us a message."
+    }else{
+      document.getElementById("messageerror").innerHTML = ""
+      messageStatus = true;
+    }
+
+
+
+
+
+
+
+    if(usernameStatus === true && emailStatus === true && mobileStatus === true && messageStatus === true){
+        return true
+    }else{
+        return false
+    }
+}
+
+    </script>
   </body>
 </html>
 

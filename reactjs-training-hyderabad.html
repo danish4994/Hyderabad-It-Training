@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React JS training in Hyderabad</title>
+    <link rel="icon" href="assests/page.logo.jpg"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="jquery/owl-Carouser/owl.carousel.min.css">
+    <link rel="stylesheet" href="jquery/owl-Carouser/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "josefin sans";
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .top-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 38px;
+        background-color: #3a8106;
+      }
+
+      .top-bar .container i {
+        color: #fff;
+      }
+      .top-bar .container a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .top-bar .container p {
+        color: #fff;
+        display: inline-block;
+      }
+
+      #dull1 {
+        position: relative;
+        left: 50px;
+      }
+      #dull {
+        opacity: 0.7;
+        position: relative;
+        right: 80px;
+      }
+      .top-bar .container i:hover {
+        color: #ffc600;
+      }
+
+      #active {
+        color: #ffc600;
+      }
+      #mynav ul li a {
+        font-size: 19px;
+        transition: 800ms;
+        color: #000000c1;
+      }
+
+      #mynav ul li a:hover {
+        color: #ffc600;
+      }
+
+      #navbar {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: #fff;
+      }
+      /* navigation part end here */
+
+      /*whatsapp part start from here */
+      .whatsapp {
+        width: 150px;
+        height: 50px;
+        border-radius: 30px;
+        background-color: #3a8106;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 42px;
+        z-index: 999;
+        position: fixed;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      }
+      .whatsapp a {
+        font-size: 22px;
+        color: white;
+      }
+      /*whatsapp part end from here */
+
+      /* content and form part start from here*/
+      #content-form {
+        background-color: #0f255f;
+      }
+      #content-form h4 {
+        color: #ffe080;
+      }
+      #content-form p {
+        padding: 10px 0px;
+        color: #fff;
+        line-height: 30px;
+      }
+      #content-form h6 {
+        color: #ffe080;
+      }
+      #content-form i {
+        margin-right: 10px;
+      }
+      #content-form form {
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+      #content-form form h6 {
+        color: black;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #content-form form input {
+        margin-bottom: 20px;
+        padding: 10px 10px;
+      }
+      #content-form form textarea {
+        height: 110px;
+        resize: none;
+      }
+      #content-form form button {
+        border: none;
+        padding: 10px 30px;
+        margin-top: 25px;
+        border-radius: 5px;
+        background-color: #ffc600;
+        font-size: 18px;
+        transition: 0.8s;
+      }
+      #content-form form button:hover {
+        background-color: #0f255f;
+        color: #ffc600;
+      }
+      /* content and form part end from here*/
+
+      /* table part start from here */
+
+      #table table tr th {
+        background-color: #002147;
+        color: #fff;
+      }
+      #table table tr a {
+        text-decoration: none;
+        color: #ff0000;
+      }
+      .imeges{
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      /* table part end here */
+
+      /* skill Covered part start from here */
+      #skill-covered {
+        background-color: #d1f4fd;
+      }
+      #skill-covered h4 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #skill-covered img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      /* skill Covered part start from here */
+
+      /* about and form part start from here */
+      #about-form p{
+        padding: 15px 0px;
+        padding-right: 20px;
+        line-height: 30px;
+        text-align: justify;
+      }
+
+      #about-form form {
+        padding: 40px;
+        background-color: #4C4C4C;
+        border-radius: 5px;
+      }
+      #about-form form h6 {
+        color: #fff;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #about-form form input {
+        margin-bottom: 20px;
+        padding: 10px 10px;
+      }
+      #about-form form textarea {
+        height: 110px;
+        resize: none;
+      }
+      #about-form form button {
+        border: none;
+        padding: 10px 30px;
+        margin-top: 25px;
+        border-radius: 5px;
+        background-color: #ffc600;
+        font-size: 18px;
+        transition: 0.8s;
+      }
+      #about-form form button:hover {
+        background-color: #0f255f;
+        color: #ffc600;
+      }
+      /* about and form part start from here */
+
+      /* who can apply part start from here */
+      #who-can-apply{
+        background-color: #F5F8FB;
+      }
+      who-can-apply p ,i{
+        padding: 10px 0px !important;
+      }
+      /* who can apply part end from here */
+
+      /* <!--Python expert role start from here--> */
+      #python-role h2{
+        margin-bottom: 25px;
+      }
+      .content{
+        background-color: #F1F1F1;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .content p{
+        padding: 15px 0px;
+      }
+      .green{
+        border-top: 3.5px solid #319B12;
+      }
+      .blue{
+        border-top: 3.5px solid #2196F3;
+      }
+      .orange{
+        border-top: 3.5px solid #FF9800;
+      }
+      /* <!--Python expert role end from here--> */
+
+      /* contact us part start from here */
+      #contact-us , #curriculum , #review , #related-courses{
+          background-color: #D1F4FD;
+        }
+        #contact-us h3,h5{
+        text-align: center;
+        padding: 10px 0px;
+    }
+      #contact-us form input{
+        padding: 10px 10px;
+        margin-bottom: 20px;
+      }
+      #contact-us form button{
+          border: none;
+          padding: 10px 30px;
+          background-color: #ffc600;
+          border-radius: 5px;
+          font-weight: 600;
+          transition: 0.8s;
+        }
+        #contact-us form button:hover{
+            background-color: #002147;
+            color: #ffc600;
+        }
+        /* contact us part end from here */
+        
+        /* certification part start from here */
+        #certificate h4{
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        #certificate p{
+            padding-right: 20px;
+            text-align: justify;
+            line-height: 28px;
+        }
+        /* certification part end from here */
+
+        /* carriculum part start from here */
+        #curriculum p{
+            text-align: center;
+            padding: 0px 20px;
+        }
+        #curriculum h4{
+            margin-bottom: 40px;
+        }
+        #curriculum button{
+            border: none;
+            padding: 10px 20px;
+            background-color: #ffc600;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        /* carriculum part end from here */
+
+        /* approach part start from here */
+    #approach{
+    background-color: #fff;
+    }
+
+    #approach figure img{
+    width: 40%;
+    }
+    #approach figure {
+    overflow: hidden;
+    background-color: #E9E9E9;
+    border-radius: 10px;
+    padding: 20px;
+    margin:10px 10px ;
+    }
+    #approach figure figcaption h2{
+    font-size: 25px;
+    text-wrap: nowrap;
+    }
+    #approach #img-size{
+    width: 66%;
+    }
+    .color{
+        color: #B71710;
+    }
+    /* approach part end from here */
+
+    /* review part start from here */
+    #review P{
+        line-height: 30px;
+    }
+    #review P:last-child{
+        text-align: end;
+    }
+    /* review part end from here */
+
+    /* related part start from here */
+    
+
+    /* related part end from here */
+
+    #related-courses figure{
+        text-align: center;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        overflow: hidden;
+    }
+    #related-courses figure img{
+        width: 100%;
+        transition: 0.8s;
+    }
+    #related-courses figure figcaption a{
+        text-decoration: none;
+        color: black;
+        transition: 0.8s;
+    }
+    #related-courses figure figcaption{
+        background-color: #fff;
+        padding: 10px 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        position: relative;
+        
+    }
+    #related-courses figure img:hover{
+        transform: scale(1.1);
+    }
+    #related-courses figure figcaption a:hover{
+        color: #3A8106;
+    }
+
+
+
+
+
+      /* footer part start from here */
+
+      #foot {
+        background-color: #3a8106;
+        color: white;
+      }
+      #foot p {
+        text-align: justify;
+        margin-top: 20px;
+        line-height: 30px;
+      }
+      #foot a {
+        display: block !important;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 20px;
+        padding-left: 20px;
+        text-wrap: nowrap;
+        transition: 800ms;
+      }
+      #foot a:hover {
+        transform: translateX(10px);
+        color: #ffc600;
+      }
+
+      #foot i {
+        color: #ffc600;
+        margin-top: 10px;
+      }
+      #foot .sociall {
+        display: flex;
+      }
+      #foot h6 {
+        margin-top: 20px;
+        padding: 0px 10px;
+        text-wrap: nowrap;
+      }
+
+      #copy-right {
+        background-color: #285803;
+      }
+      #copy-right h6 {
+        color: #fff;
+      }
+
+      @media (max-width: 991px) {
+        #topbar {
+          opacity: 0;
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top-details part start from here -->
+
+    <div id="topbar" class="top-bar d-flex">
+      <div class="container ms-5 ps-5 pt-2" id="dull1">
+        <i class="fa fa-envelope"></i
+        ><a href="" class="ms-2 me-3">danish0ahmad@gmail.com</a>
+        <i class="fa fa-phone"></i>
+        <p class="ms-2">+91 95065 19510</p>
+      </div>
+      <div class="container text-end pt-2 me-5">
+        <a id="dull" href="" class="ps-2"><i class="fa fa-facebook-f"></i></a>
+        <a id="dull" href="" class="ps-2"><i class="fa fa-instagram"></i></a>
+        <a id="dull" href="" class="ps-2"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- top-details part end from here -->
+
+    <!-- navbar part start from here -->
+
+    <header class="container-fluid" id="navbar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a href="index.html" class="navbar-brand ms-md-5">
+            <img src="assests/logo.jpg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            data-bs-target="#mynav"
+            data-bs-toggle="collapse"
+          >
+            <i id="btn" class="fa fa-bars"></i>
+          </button>
+          <div
+            id="mynav"
+            class="collapse navbar-collapse text-center justify-content-end me-5"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" id="active" class="nav-link pe-3">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="aboutus.html" class="nav-link pe-3"> About Us </a>
+              </li>
+              <li class="nav-item">
+                <a href="courses.html" class="nav-link pe-3"> Courses </a>
+              </li>
+              <li class="nav-item">
+                <a href="batches.html" class="nav-link pe-3"> New Batches </a>
+              </li>
+              <li class="nav-item">
+                <a href="placement.html" class="nav-link pe-3"> Placement </a>
+              </li>
+              <li class="nav-item">
+                <a href="student_registration.html" class="nav-link pe-3">
+                  Register
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="student_review.html" class="nav-link pe-3">
+                  Student Zone
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link pe-3"> Contact Us </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- navbar part end from here -->
+
+    <!-- whatsapp part start from here -->
+    <div class="whatsapp">
+      <a class="btn" href="https://wa.me/+919506519510"
+        ><i class="fa fa-whatsapp"></i>Whatsapp</a
+      >
+    </div>
+    <!-- whatsapp part start from here -->
+
+    <!-- form - content part start from here -->
+    <section class="container-fluid py-5" id="content-form">
+      <div class="container">
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+            <h4>
+                React JS training in Hyderabad with Live projects
+            </h4>
+            <p>
+                Hyderabad IT Trainings offers Affordable React JS classroom training in Hyderabad &
+                 React JS Online training by Industry experts. Our React JS course includes from basic
+                  to advanced level concepts. We have designed our React JS course content based on 
+                  students requirement to achieve their Goal. We offer both React JS classroom training 
+                  in Madhapur Hyderabad and React JS online training with live projects. We are one of 
+                  the leading React JS training Institutes in Hyderabad.
+            </p>
+            <p>
+                React JS is a front-end library developed by facebook for handling the view layer for web 
+                and mobile apps. It allows creating reusable UI components. It is currently the most popular 
+                JavaScript library and there is a huge community out there. Hyderabad IT Trainings offers
+                 advanced React JS course in Hyderabad. In this React JS course we cover JSX, Components, 
+                 Unidirectional Data Flow and Flux and License with live projects.
+            </p>
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <h6>Course Duration</h6>
+                <p>30 Days</p>
+              </div>
+              <div class="col-12 col-lg-4">
+                <h6>Training Options</h6>
+                <p>Classroom / Online</p>
+              </div>
+              <div class="col-12 col-lg-4">
+                <h6>Rating</h6>
+                <p>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i
+                  ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                  ><i class="fa fa-star"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+            <form action="">
+              <h6>Register for Demo</h6>
+              <input
+                type="text"
+                name="name"
+                id=""
+                placeholder="Name"
+                class="form-control"
+              />
+              <input
+                type="email"
+                name="email"
+                id=""
+                placeholder="Email"
+                class="form-control"
+              />
+              <input
+                type="tel"
+                name="mobile"
+                id=""
+                placeholder="Phone"
+                class="form-control"
+              />
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="message"
+                class="form-control"
+              ></textarea>
+              <button type="submit" class="main-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- form - content part start from here -->
+
+    <!-- table part start from here -->
+    <section class="container py-5" id="table">
+      <div class="row row mx-md-5 text-center">
+        <div class="col-12 col-sm-12 col-md-4">
+          <div class="imeges mb-5">
+            <div class="green"></div>
+            <img src="https://hyderabadittrainings.com/images/gr.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4">
+          <div class="imeges mb-5">
+            <div class="blue"></div>
+          <img src="https://hyderabadittrainings.com/images/fb.jpg" alt="">
+        </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4">
+          <div class="imeges mb-5">
+            <div class="orange"></div>
+          <img src="https://hyderabadittrainings.com/images/justdial.jpg" alt="">
+        </div>
+        </div>
+      </div>
+      <div class="row mx-md-5">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 table-responsive">
+          <table class="table table-hover table-bordered">
+            <tr>
+              <th class="p-3">Course</th>
+              <th class="p-3">Date</th>
+              <th class="p-3">Timings</th>
+              <th class="p-3">Duration</th>
+              <th class="p-3">Trainer</th>
+              <th class="p-3">Register for Demo</th>
+            </tr>
+            <tr>
+              <td class="p-3">React JS</td>
+              <td class="p-3">17-OCT-2023</td>
+              <td class="p-3">4:00 PM - 5:00 PM</td>
+              <td class="p-3">25 Days</td>
+              <td class="p-3">Mr.Bharghav</td>
+              <td class="p-3"><a href="">Register Now </a></td>
+            </tr>
+            <tr>
+              <td class="p-3">React JS</td>
+              <td class="p-3">11-OCT-2023</td>
+              <td class="p-3">9:00 AM - 10:00 AM</td>
+              <td class="p-3">25 Days</td>
+              <td class="p-3">Mr.Bharghav</td>
+              <td class="p-3"><a href="">Register Now </a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- table part end from here -->
+
+    <!-- skill Covered part start from here -->
+    <section class="container-fluid py-5" id="skill-covered">
+      <div class="container">
+        <h4>Skills Covered</h4>
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/react.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/redux.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/ui%20tools.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/live-projects.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill Covered part end from here -->
+
+    <!-- about python part start from here -->
+
+    <section class="container pt-5" id="about-form">
+      <div class="row mx-md-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+          <h4>About React JS Course in Hyderabad</h4>
+          <p>
+            Hyderabad IT Trainings Offers Job oriented React JS course in Hyderabad. 
+            Our React JS course content was created by Industry experts to fulfill 
+            industry expectations. Such a detailed React JS course helped our students
+             to secure jobs in various MNCs. The trainers at Hyderabad IT Trainings 
+             are corporate professionals providing in-depth training on React JS training. 
+             We are one of the leading React JS Institutes in Hyderabad.
+          </p>
+          <h4>React JS Training Institutes in Hyderabad</h4>
+          <p>
+            Hyderabad IT Trainings is designed to help you master React JS. Hyderabad IT 
+            Trainings React JS Training is an industry experts designed course for mastering 
+            the basic to advanced concepts. Get the best React JS training course in Hyderabad 
+            by experts.
+          </p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+            <form action="">
+                <h6>Register for Demo</h6>
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Name"
+                  class="form-control"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="Email"
+                  class="form-control"
+                />
+                <input
+                  type="tel"
+                  name="mobile"
+                  id=""
+                  placeholder="Phone"
+                  class="form-control"
+                />
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="message"
+                  class="form-control"
+                ></textarea>
+                <button type="submit" class="main-btn">Submit</button>
+              </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- about python part end from here -->
+
+    <!-- who can apply part end from here -->
+    <section class="container-fluid py-5" id="who-can-apply">
+        <div class="container">
+            <div class="row mx-md-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                    <h2>Who Can Apply for the Course?</h2>
+                    <p><i class="fa fa-check"></i>Individuals with a bachelor’s degree and a keen interest to learn Python fullstack course.</p>
+                    <p><i class="fa fa-check"></i>IT professionals looking for a career transition in software development or Fullstack web development.</p>
+                    <p><i class="fa fa-check"></i>Professionals aiming to move ahead in their careers.</p>
+                    <p><i class="fa fa-check"></i>Freshers or final-year college students who want to build a career in python fullstack web development.</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <img class="img-fluid" src="https://hyderabadittrainings.com/images/who-can-apply.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- who can apply part end from here -->
+
+    <!--Python expert role start from here-->
+    <section class="container py-5" id="python-role">
+        <div class="row mx-md-5">
+            <h2>What roles can React JS expert play?</h2>
+            <div class="col-12 col-lg-4">
+                <div class="content green">
+                    <p>React Developer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content blue">
+                    <p>Software Engineer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content orange">
+                    <p>Frontend developer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content green">
+                    <p>UI developer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content blue">
+                    <p>Web designer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content orange">
+                    <p>Web Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Python expert role end from here--> 
+
+    <!--contact us start from here-->
+    <section class="container-fluid py-5" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8 mx-auto">
+                    <h3>Still Hunting for a Python Fullstack Developer Job in Hyderabad?</h3>
+                </div>
+                <div class="col-12 col-sm-7 mx-auto">
+                    <h5>All you need is Learn Courses from Industry Expert with Hyderabad IT Trainigs</h5>
+                </div>
+            </div>
+            <form action="">
+                <div class="row mx-md-5">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <input type="text" name="text" id="" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <input type="email" name="text" id="" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <input type="tel" name="text" id="" class="form-control" placeholder="Mobile">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <button type="submit">Register For Demo</button>
+                    </div>
+                    
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+    <!--contact us end from here-->
+
+    <!--course certification start from here-->
+    <section class="container" id="certificate">
+        <div class="row mx-md-5">
+            <div class="col-12 col-lg-7">
+                <h4>About Hyderabad IT Trainings</h4>
+                <p>Hyderabad IT Trainings Offers Job oriented Python full stack developer Course in Hyderabad. 
+                    Our Python full stack developer course content created by industry experts to full fill industry
+                     expectations. Such detailed Python full stack developer course helped our students to secure job 
+                     in various MNCs. The trainers at Hyderabad IT Trainings are subject specialist and corporate 
+                     professionals providing in-depth training on Python full stack. We are one of best Python full
+                      stack developer training institutes in Hyderabad.
+                </p>
+            </div>
+            <div class="col-12 col-lg-5">
+                <img class="container-fluid" src="https://hyderabadittrainings.com/images/certificate-1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--course certification end from here-->
+
+    <!--carriculum start from here-->
+    <section class="container-fluid py-5" id="curriculum">
+        <div class="container">
+            <div class="row mx-md-5">
+                <div class="col-12 col-lg-6">
+                        <h4>Curriculum</h4>
+                        <p>Enroll for React JS course today. Request Demo class from React JS developers.
+                             Our instructor is having 9+ years hands on experience in React JS. Click the 
+                             button to download the latest course curriculum.
+                        </p>
+                        <button>Download Course Content</button>
+             </div>
+                <div class="col-12 col-lg-6">
+                    <h4>Demo video</h4>
+                    <iframe width="450" height="315" 
+                    src="https://www.youtube.com/embed/3wzMqbfOfls?si=UEkJcZd_xrzWttuj"
+                     title="YouTube video player" frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                </div>
+        </div>
+    </section>
+    <!--carriculum start from here-->
+
+    <!-- approach part start from here -->
+
+    <section class="container-fluid pt-4 pb-5" id="approach">
+    <div class="container ">
+        <h3 class="text-center">Our Training<span class="color"> Approach</span></h3>
+        <div class="row mx-md-5 mt-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <figure class="text-center">
+                    <img src="assests/approach/earth.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Theory</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <figure class="text-center">
+                    <img src="assests/approach/work.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2"> Project Work</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <figure class="text-center">
+                    <img src="assests/approach/assigment.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Assignments</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/medal.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Certification</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/resume-1.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Resume Preparation</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/interview.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Interview Preparation</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img id="img-size" src="assests/approach/resume marketting.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Resume Marketing</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/job-interview.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Placement Support</h2>
+                   </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div> 
+    </section>
+
+    <!-- approach part end from here -->
+
+    <!-- review part start from here -->
+
+
+    <section class="container-fluid py-5" id="review">
+        <h4 class="text-center mb-5">Reviews</h4>
+    <div class="container">
+        <div class="row mx-md-5 px-3">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Good place for Python fullstack developer course in Hyderabad withplacement
+                         support had enrolled for Python Full stack course andTrainer helped to clear my queries. Overall experience
+                          was very nice.Thank you very much Sir and entire Team.
+                    </p>
+                    <p>Siva Jyothi</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Best institute for learning Python fullstack course in madhapurespecially for 
+                        freshers. The trainer is good and has good experience and ateaching skills. They also provide placements. 
+                        Hyderabad IT Trainings isa Python full stack developer training institute for learning Python fullstack 
+                        developer course with live projects.
+                    </p>
+                    <p>PAmar Rao</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Good place for Python fullstac Training in Hyderabad with placementsupport 
+                        had enrolled for Python full stack developer course andTrainer helped to clear my queries. Overall 
+                        experience was very nice.Thank you very much Sir and entire Team.
+                   </p>
+                   <p>Shravani Allumalla</p>
+                </div>
+                <div class="item">
+                    <p> <i class="fa fa-quote-right"></i> I had enrolled for Python fullstack developer Course with HyderabadT 
+                        Trainings. It was a great experience. Trainer gave additional exercisesto practice which made the whole 
+                        process very simple. I highlyrecommend Hyderabad IT Trainings to anybody wanting to learn Pythonfull 
+                        stack developer Course in Hyderabad
+                    </p>
+                    <p>Rekha Tadiboina</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Hyderabad IT Trainings provides you with the best Python fullstackdeveloper
+                         course and they cover all areas with details. The online classesare very interactive and the trainers are 
+                         market intluencers so thesessions are really insightful. If you are looking for a Python full stackdeveloper
+                          online training then you should definitely choose HyderabadIT Trainings.
+                    </p>
+                    <p>YSK</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Before of thisI joined 2 institues for learning Python fullstackdeveloper
+                         course what i am expecting their are not giving that much,every thing their r telling normal way like simple
+                          commonly otherinstitues doing,teaching.But the way of teaching this institue is fullydifferent from others
+                           For IDENTIFYING BEST one which is completlydifferent from other institues,i take 6 months of time and it 
+                           changes my life
+                   </p>
+                   <p>Kavya T</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Good place for Python fullstack developer course in Hyderabad withplacement
+                         support I had enrolled for Python Full stack course andTrainer helped to clear my queries. Overall experience
+                          was very nice.Thank you very much Sir and entire leam
+                    </p>
+                    <p>Mohammad Khalida Parveen</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!-- review part end from here -->
+
+    <!-- accordion part start from here -->
+
+    <section class="container py-5" id="Frequently-Asked-Questions">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="row mx-md-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa fa-file pe-4"></i> React JS Classroom Training
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Hyderabad IT Trainings’s professional head">React JS classroom training offers you the best learning 
+                        experience in React JS from basics to advance level concepts. By the end of the React JS course at 
+                        Hyderabad IT Trainings, you will have gained a real-time experience. We offer 100% placement support
+                         after the completion of the React JS Classroom Training in Hyderabad.                
+                     </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa fa-file pe-4"></i> React JS Online Training
+
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Enroll for the React JS Online Training at Hyderabad IT Trainings to get proficient in the basic and
+                         necessary concepts. Upon completing the React JS course, students have good knowledge of the React JS,
+                          Redux. Join the React JS Course online at Hyderabad IT Trainings and possess solid foundational skills
+                           in React JS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="fa fa-file pe-4"></i> What are the Prerequisites for React JS Training?
+
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Yes, we should know about Javas cript to join for our Advance level React JS course.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingfour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                          <i class="fa fa-file pe-4"></i> What is the React JS Course fee in Hyderabad?
+                      </button>
+                    </h2>
+                    <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        React JS course fee in Hyderabad varies from institute to institute depending on the Training
+                         Quality & course structure. The average React JS course fee starts from 9, 000/- onwards.                   
+                     </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingfive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                          <i class="fa fa-file pe-4"></i> What are the skills I have to learn to become a React JS developer?
+                      </button>
+                    </h2>
+                    <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        You need to learn JSX, Virtual DOM, Creating a simple React Application, React UI and Forms,
+                         Component Life Cycle, Event Handling in JSX, React Styles, React Router & Navigation, Redux, 
+                         Javascript - ES6, Crud Operations, Login and Logout etc.                   
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingsix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                          <i class="fa fa-file pe-4"></i> What is the eligibility to learn a React JS Course?
+                      </button>
+                    </h2>
+                    <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        To learn a React JS Course, you do not need any specific qualifications. But a minimum 
+                        graduation is required, If java script knowledge is an extra advantage.                  
+                         </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingseven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                          <i class="fa fa-file pe-4"></i> What are the Career Opportunities of React JS developers?
+                      </button>
+                    </h2>
+                    <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        The demand for good React JS Developers in India is increasing every day. 
+                            All Software Companies are looking for people who can build great functionality.                 
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+    <!-- accordion part start from here -->
+
+    <!--contact us start from here-->
+    <section class="container-fluid py-5" id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-8 mx-auto">
+                <h3>Still Hunting for a Python Fullstack Developer Job in Hyderabad?</h3>
+            </div>
+            <div class="col-12 col-sm-7 mx-auto">
+                <h5>All you need is Learn Courses from Industry Expert with Hyderabad IT Trainigs</h5>
+            </div>
+        </div>
+        <form action="">
+            <div class="row mx-md-5">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <input type="text" name="text" id="" class="form-control" placeholder="Name">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <input type="email" name="text" id="" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <input type="tel" name="text" id="" class="form-control" placeholder="Mobile">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <button type="submit">Register For Demo</button>
+                </div>
+                
+            </div>
+        </form>
+        </div>
+    </div>
+    </section>
+    <!--contact us end from here-->
+
+    <!-- alimni-working-place part start from here -->
+    <section class="container py-5" id="alumni-working-place">
+        <h2 class="text-center">Our Alumni Work At</h2>
+        <div class="row mx-md-5">
+            <img src="https://hyderabadittrainings.com/images/amazon.png" alt="">
+        </div>
+    </section>
+    <!-- alimni-working-place part start from here -->
+
+    <!-- related courses part start from here -->
+    <section class="container-fluid py-5" id="related-courses">
+        <div class="container">
+            <div class="row mx-md-5">
+                <h2>Related Courses</h2>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href="python-fullstack-developer-course-hyderabad.html"><img src="https://hyderabadittrainings.com/images/course/python%20(1).jpg" alt=""></a>
+                        <figcaption>
+                            <a href="python-fullstack-developer-course-hyderabad.html">Python Fullstack</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href="mern-fullstack-developer-course-hyderabad.html"><img src="https://hyderabadittrainings.com/images/course/full-stack-dev.webp" alt=""></a>
+                        <figcaption>
+                            <a href="mern-fullstack-developer-course-hyderabad.html">MERN Full Stack Developer</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href=""><img src="https://hyderabadittrainings.com/images/course/phpmysql.webp" alt=""></a>
+                        <figcaption>
+                            <a href="">PHP with MySQL</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href=""><img src="https://hyderabadittrainings.com/images/course/python%20(2).jpg" alt=""></a>
+                        <figcaption>
+                            <a href="">UI/UX Designing</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- related courses part end from here -->
+
+
+    <footer class="container-fluid pb-4" id="foot">
+      <div class="container">
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 pe-4">
+            <h4>Hyderabad IT Trainings</h4>
+            <p>
+              Hyderabad IT Trainings offers an excellent Software courses
+              training with end to end support to the candidates. We offer MERN
+              Full stack, Python Fullstack, React JS, UI Development, Web/UI
+              Designing & Web Development.
+            </p>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 ps-2">
+            <h4>Quick Links</h4>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="student_registration.html">Registration</a>
+            </div>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="courses.html">All Courses</a>
+            </div>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="privacy_policy.html">Privacy policy</a>
+            </div>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="refund_policy.html">Refund Policy</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 ps-2">
+            <h4>Reach Us</h4>
+            <div class="sociall">
+              <i class="bi bi-house"></i>
+              <p class="ps-4">
+                House No 40, Third Floor <br />
+                Vittalrao Nagar <br />
+                Madhapur <br />
+                Hitech City Main Rd <br />
+                Hyderabad <br />
+                Telangana 500081
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 ps-2">
+            <h4>Contact Us</h4>
+            <div class="sociall">
+              <i class="fa fa-phone"></i>
+              <h6>+91 95065 19510</h6>
+            </div>
+            <div class="sociall">
+              <i class="fa regular fa-envelope"></i>
+              <h6>danish0ahmad@gmail.com</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <section class="container-fluid" id="copy-right">
+      <div class="container py-4">
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-9">
+            <h6>
+              © Copyrights 2023 @ Hyderabad IT Trainings - MERN Python Fullstack
+              | UI Development UI UX Design Institute in Hyderabad All rights
+              reserved.
+            </h6>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+            <h6 class="text-center">
+              Designed by
+              <span class="color bg-danger p-3 rounded text-white"
+                >Mohd Danish
+              </span>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jquery/owl-Carouser/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:40,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:2
+        }
+    }
+});
+    </script>
+  </body>
+</html>

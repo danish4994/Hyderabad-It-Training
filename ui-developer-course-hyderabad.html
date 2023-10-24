@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ui-developer-course-hyderabad</title>
+    <link rel="icon" href="assests/page.logo.jpg"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="jquery/owl-Carouser/owl.carousel.min.css">
+    <link rel="stylesheet" href="jquery/owl-Carouser/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "josefin sans";
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .top-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 38px;
+        background-color: #3a8106;
+      }
+
+      .top-bar .container i {
+        color: #fff;
+      }
+      .top-bar .container a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .top-bar .container p {
+        color: #fff;
+        display: inline-block;
+      }
+
+      #dull1 {
+        position: relative;
+        left: 50px;
+      }
+      #dull {
+        opacity: 0.7;
+        position: relative;
+        right: 80px;
+      }
+      .top-bar .container i:hover {
+        color: #ffc600;
+      }
+
+      #active {
+        color: #ffc600;
+      }
+      #mynav ul li a {
+        font-size: 19px;
+        transition: 800ms;
+        color: #000000c1;
+      }
+
+      #mynav ul li a:hover {
+        color: #ffc600;
+      }
+
+      #navbar {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: #fff;
+      }
+      /* navigation part end here */
+
+      /*whatsapp part start from here */
+      .whatsapp {
+        width: 150px;
+        height: 50px;
+        border-radius: 30px;
+        background-color: #3a8106;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 42px;
+        z-index: 999;
+        position: fixed;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      }
+      .whatsapp a {
+        font-size: 22px;
+        color: white;
+      }
+      /*whatsapp part end from here */
+
+      /* content and form part start from here*/
+      #content-form {
+        background-color: #0f255f;
+      }
+      #content-form h4 {
+        color: #ffe080;
+      }
+      #content-form p {
+        padding: 10px 0px;
+        color: #fff;
+        line-height: 30px;
+      }
+      #content-form h6 {
+        color: #ffe080;
+      }
+      #content-form i {
+        margin-right: 10px;
+      }
+      #content-form form {
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+      #content-form form h6 {
+        color: black;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #content-form form input {
+        margin-bottom: 20px;
+        padding: 10px 10px;
+      }
+      #content-form form textarea {
+        height: 110px;
+        resize: none;
+      }
+      #content-form form button {
+        border: none;
+        padding: 10px 30px;
+        margin-top: 25px;
+        border-radius: 5px;
+        background-color: #ffc600;
+        font-size: 18px;
+        transition: 0.8s;
+      }
+      #content-form form button:hover {
+        background-color: #0f255f;
+        color: #ffc600;
+      }
+      /* content and form part end from here*/
+
+      /* table part start from here */
+
+      #table table tr th {
+        background-color: #002147;
+        color: #fff;
+      }
+      #table table tr a {
+        text-decoration: none;
+        color: #ff0000;
+      }
+      /* table part end here */
+
+      /* skill Covered part start from here */
+      #skill-covered {
+        background-color: #d1f4fd;
+      }
+      #skill-covered h4 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #skill-covered img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      /* skill Covered part start from here */
+
+      /* about and form part start from here */
+      #about-form p{
+        padding: 15px 0px;
+        padding-right: 20px;
+        line-height: 30px;
+        text-align: justify;
+      }
+
+      #about-form form {
+        padding: 40px;
+        background-color: #4C4C4C;
+        border-radius: 5px;
+      }
+      #about-form form h6 {
+        color: #fff;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #about-form form input {
+        margin-bottom: 20px;
+        padding: 10px 10px;
+      }
+      #about-form form textarea {
+        height: 110px;
+        resize: none;
+      }
+      #about-form form button {
+        border: none;
+        padding: 10px 30px;
+        margin-top: 25px;
+        border-radius: 5px;
+        background-color: #ffc600;
+        font-size: 18px;
+        transition: 0.8s;
+      }
+      #about-form form button:hover {
+        background-color: #0f255f;
+        color: #ffc600;
+      }
+      /* about and form part start from here */
+
+      /* who can apply part start from here */
+      #who-can-apply{
+        background-color: #F5F8FB;
+      }
+      who-can-apply p ,i{
+        padding: 10px 0px !important;
+      }
+      /* who can apply part end from here */
+
+      /* <!--Python expert role start from here--> */
+      #python-role h2{
+        margin-bottom: 25px;
+      }
+      .content{
+        background-color: #F1F1F1;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .content p{
+        padding: 15px 0px;
+      }
+      .green{
+        border-top: 3.5px solid #319B12;
+      }
+      .blue{
+        border-top: 3.5px solid #2196F3;
+      }
+      .orange{
+        border-top: 3.5px solid #FF9800;
+      }
+      /* <!--Python expert role end from here--> */
+
+      /* contact us part start from here */
+      #contact-us , #curriculum , #review , #related-courses{
+          background-color: #D1F4FD;
+        }
+        #contact-us h3,h5{
+        text-align: center;
+        padding: 10px 0px;
+    }
+      #contact-us form input{
+        padding: 10px 10px;
+        margin-bottom: 20px;
+      }
+      #contact-us form button{
+          border: none;
+          padding: 10px 30px;
+          background-color: #ffc600;
+          border-radius: 5px;
+          font-weight: 600;
+          transition: 0.8s;
+        }
+        #contact-us form button:hover{
+            background-color: #002147;
+            color: #ffc600;
+        }
+        /* contact us part end from here */
+        
+        /* certification part start from here */
+        #certificate h4{
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        #certificate p{
+            padding-right: 20px;
+            text-align: justify;
+            line-height: 28px;
+        }
+        /* certification part end from here */
+
+        /* carriculum part start from here */
+        #curriculum p{
+            text-align: center;
+            padding: 0px 20px;
+        }
+        #curriculum li{
+            padding: 10px 0px;
+        }
+        #curriculum h4{
+            margin-bottom: 40px;
+        }
+        #curriculum .accordion-button{
+            padding: 8px 10px;
+        }
+        /* carriculum part end from here */
+
+        /* approach part start from here */
+    #approach{
+    background-color: #fff;
+    }
+
+    #approach figure img{
+    width: 40%;
+    }
+    #approach figure {
+    overflow: hidden;
+    background-color: #E9E9E9;
+    border-radius: 10px;
+    padding: 20px;
+    margin:10px 10px ;
+    }
+    #approach figure figcaption h2{
+    font-size: 25px;
+    text-wrap: nowrap;
+    }
+    #approach #img-size{
+    width: 66%;
+    }
+    .color{
+        color: #B71710;
+    }
+    /* approach part end from here */
+
+    /* review part start from here */
+    #review P{
+        line-height: 30px;
+    }
+    #review P:last-child{
+        text-align: end;
+    }
+    /* review part end from here */
+
+    /* related part start from here */
+    
+
+    /* related part end from here */
+
+    #related-courses figure{
+        text-align: center;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        overflow: hidden;
+    }
+    #related-courses figure img{
+        width: 100%;
+        transition: 0.8s;
+    }
+    #related-courses figure figcaption a{
+        text-decoration: none;
+        color: black;
+        transition: 0.8s;
+    }
+    #related-courses figure figcaption{
+        background-color: #fff;
+        padding: 10px 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        position: relative;
+        
+    }
+    #related-courses figure img:hover{
+        transform: scale(1.1);
+    }
+    #related-courses figure figcaption a:hover{
+        color: #3A8106;
+    }
+
+
+
+
+
+      /* footer part start from here */
+
+      #foot {
+        background-color: #3a8106;
+        color: white;
+      }
+      #foot p {
+        text-align: justify;
+        margin-top: 20px;
+        line-height: 30px;
+      }
+      #foot a {
+        display: block !important;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 20px;
+        padding-left: 20px;
+        text-wrap: nowrap;
+        transition: 800ms;
+      }
+      #foot a:hover {
+        transform: translateX(10px);
+        color: #ffc600;
+      }
+
+      #foot i {
+        color: #ffc600;
+        margin-top: 10px;
+      }
+      #foot .sociall {
+        display: flex;
+      }
+      #foot h6 {
+        margin-top: 20px;
+        padding: 0px 10px;
+        text-wrap: nowrap;
+      }
+
+      #copy-right {
+        background-color: #285803;
+      }
+      #copy-right h6 {
+        color: #fff;
+      }
+
+      @media (max-width: 991px) {
+        #topbar {
+          opacity: 0;
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top-details part start from here -->
+
+    <div id="topbar" class="top-bar d-flex">
+      <div class="container ms-5 ps-5 pt-2" id="dull1">
+        <i class="fa fa-envelope"></i
+        ><a href="" class="ms-2 me-3">danish0ahmad@gmail.com</a>
+        <i class="fa fa-phone"></i>
+        <p class="ms-2">+91 95065 19510</p>
+      </div>
+      <div class="container text-end pt-2 me-5">
+        <a id="dull" href="" class="ps-2"><i class="fa fa-facebook-f"></i></a>
+        <a id="dull" href="" class="ps-2"><i class="fa fa-instagram"></i></a>
+        <a id="dull" href="" class="ps-2"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- top-details part end from here -->
+
+    <!-- navbar part start from here -->
+
+    <header class="container-fluid" id="navbar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a href="index.html" class="navbar-brand ms-md-5">
+            <img src="assests/logo.jpg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            data-bs-target="#mynav"
+            data-bs-toggle="collapse"
+          >
+            <i id="btn" class="fa fa-bars"></i>
+          </button>
+          <div
+            id="mynav"
+            class="collapse navbar-collapse text-center justify-content-end me-5"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" id="active" class="nav-link pe-3">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="aboutus.html" class="nav-link pe-3"> About Us </a>
+              </li>
+              <li class="nav-item">
+                <a href="courses.html" class="nav-link pe-3"> Courses </a>
+              </li>
+              <li class="nav-item">
+                <a href="batches.html" class="nav-link pe-3"> New Batches </a>
+              </li>
+              <li class="nav-item">
+                <a href="placement.html" class="nav-link pe-3"> Placement </a>
+              </li>
+              <li class="nav-item">
+                <a href="student_registration.html" class="nav-link pe-3">
+                  Register
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="student_review.html" class="nav-link pe-3">
+                  Student Zone
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link pe-3"> Contact Us </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- navbar part end from here -->
+
+    <!-- whatsapp part start from here -->
+    <div class="whatsapp">
+      <a class="btn" href="https://wa.me/+919506519510"
+        ><i class="fa fa-whatsapp"></i>Whatsapp</a
+      >
+    </div>
+    <!-- whatsapp part start from here -->
+
+    <!-- form - content part start from here -->
+    <section class="container-fluid py-5" id="content-form">
+      <div class="container">
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+            <h4>
+                UI Development Training in Hyderabad with Live Projects
+            </h4>
+            <p>
+                Hyderabad IT Trainings offers Affordable UI Development classroom Training in Hyderabad & 
+                UI Development Online Training by Industry Experts. Our UI Developer Course includes from 
+                Basic to Advanced Level UI Development. We have designed our UI Development course content 
+                based on students' requirements to achieve their goal. We offer both UI Development classroom
+                 training and UI Development online training with real time projects. We are one of the leading
+                  UI Development training Institutes in Hyderabad.
+            </p>
+            <p>
+                UI Development (User Interface Development) is the development of websites, web applications. 
+                User Interface plays a key role in the software development life cycle. Our UI Developer Course
+                 in Hyderabad is designed for beginners, working professionals. UI Developer Course makes you 
+                 learn the complete concepts of UI technologies right from basics to advanced level. In this UI 
+                 Development course we cover HTML, CSS, Bootstrap, Javascript, JQuery, ReactJS, Redux with live projects.
+            </p>
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <h6>Course Duration</h6>
+                <p>70 Days</p>
+              </div>
+              <div class="col-12 col-lg-4">
+                <h6>Training Options</h6>
+                <p>Classroom / Online</p>
+              </div>
+              <div class="col-12 col-lg-4">
+                <h6>Rating</h6>
+                <p>
+                  <i class="fa fa-star"></i><i class="fa fa-star"></i
+                  ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                  ><i class="fa fa-star"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+            <form action="">
+              <h6>Register for Demo</h6>
+              <input
+                type="text"
+                name="name"
+                id=""
+                placeholder="Name"
+                class="form-control"
+              />
+              <input
+                type="email"
+                name="email"
+                id=""
+                placeholder="Email"
+                class="form-control"
+              />
+              <input
+                type="tel"
+                name="mobile"
+                id=""
+                placeholder="Phone"
+                class="form-control"
+              />
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="message"
+                class="form-control"
+              ></textarea>
+              <button type="submit" class="main-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- form - content part start from here -->
+
+    <!-- table part start from here -->
+    <section class="container mb-5" id="table">
+      <div class="row mx-md-5">
+        <h3 class="text-center pt-4 pb-4">
+          New <span class="color"> Batches </span>
+        </h3>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 table-responsive">
+          <table class="table table-hover table-bordered">
+            <tr>
+              <th class="p-3">Course</th>
+              <th class="p-3">Date</th>
+              <th class="p-3">Timings</th>
+              <th class="p-3">Duration</th>
+              <th class="p-3">Trainer</th>
+              <th class="p-3">Register for Demo</th>
+            </tr>
+            <tr>
+              <td class="p-3">UI Development</td>
+              <td class="p-3">16-OCT-2023</td>
+              <td class="p-3">5:00 PM - 6:00 PM</td>
+              <td class="p-3">70 Days</td>
+              <td class="p-3">Mr.Bharghav</td>
+              <td class="p-3"><a href="">Register Now </a></td>
+            </tr>
+            <tr>
+              <td class="p-3">UI Development</td>
+              <td class="p-3">12-OCT-2023</td>
+              <td class="p-3">5:00 PM - 6:00 PM</td>
+              <td class="p-3">70 Days</td>
+              <td class="p-3">Mr.Bharghav</td>
+              <td class="p-3"><a href="">Register Now </a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- table part end from here -->
+
+    <!-- skill Covered part start from here -->
+    <section class="container-fluid py-5" id="skill-covered">
+      <div class="container">
+        <h4>Skills Covered</h4>
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/html5.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/css.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/javascript.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/bootstrap.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/jquery.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/ecmascript.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/react.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/redux.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/webhosting.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/ui%20tools.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <img
+              src="https://hyderabadittrainings.com/images/skills/live-projects.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill Covered part end from here -->
+
+    <!-- about python part start from here -->
+
+    <section class="container pt-5" id="about-form">
+      <div class="row mx-md-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+          <h4>About UI Developer Course in Hyderabad</h4>
+          <p>
+            Hyderabad IT Trainings Offers Job oriented UI Developer Course in Hyderabad. 
+            Our UI Developer Course content was created by industry experts to full fill 
+            industry expectations. Such a detailed UI Development or web development course
+             helped our students to secure jobs in various MNCs. The trainers at Hyderabad
+              IT Trainings are subject specialists & corporate professionals providing in-depth
+               training on UI Development course in Hyderabad.
+          </p>
+          <h4>UI Development Institutes in Hyderabad</h4>
+          <p>
+            Hyderabad IT Trainings is designed to help you master Web development or UI Development.
+             Hyderabad IT Trainings UI Development Training is an industry expert’s designed course 
+             for mastering the basic to advanced concepts. Get the best UI Development Training Course
+              in Hyderabad by experts.
+          </p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+            <form action="">
+                <h6>Register for Demo</h6>
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Name"
+                  class="form-control"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="Email"
+                  class="form-control"
+                />
+                <input
+                  type="tel"
+                  name="mobile"
+                  id=""
+                  placeholder="Phone"
+                  class="form-control"
+                />
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="message"
+                  class="form-control"
+                ></textarea>
+                <button type="submit" class="main-btn">Submit</button>
+              </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- about python part end from here -->
+
+    <!-- who can apply part end from here -->
+    <section class="container-fluid py-5" id="who-can-apply">
+        <div class="container">
+            <div class="row mx-md-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                    <h2>Who Can Apply for the Course?</h2>
+                    <p><i class="fa fa-check"></i>Individuals with a bachelor’s degree and a keen interest to learn Python fullstack course.</p>
+                    <p><i class="fa fa-check"></i>IT professionals looking for a career transition in software development or Fullstack web development.</p>
+                    <p><i class="fa fa-check"></i>Professionals aiming to move ahead in their careers.</p>
+                    <p><i class="fa fa-check"></i>Freshers or final-year college students who want to build a career in python fullstack web development.</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <img class="img-fluid" src="https://hyderabadittrainings.com/images/who-can-apply.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- who can apply part end from here -->
+
+    <!--Python expert role start from here-->
+    <section class="container py-5" id="python-role">
+        <div class="row mx-md-5">
+            <h2>What roles can MERN fullstack expert play?</h2>
+            <div class="col-12 col-lg-4">
+                <div class="content green">
+                    <p>Web Developer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content blue">
+                    <p>Software Engineer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content orange">
+                    <p>UI developer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content green">
+                    <p>UI designer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content blue">
+                    <p>Frontend developer</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="content orange">
+                    <p>Web Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Python expert role end from here--> 
+
+    <!--contact us start from here-->
+    <section class="container-fluid py-5" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8 mx-auto">
+                    <h3>Still Hunting for a Python Fullstack Developer Job in Hyderabad?</h3>
+                </div>
+                <div class="col-12 col-sm-7 mx-auto">
+                    <h5>All you need is Learn Courses from Industry Expert with Hyderabad IT Trainigs</h5>
+                </div>
+            </div>
+            <form action="">
+                <div class="row mx-md-5">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <input type="text" name="text" id="" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <input type="email" name="text" id="" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <input type="tel" name="text" id="" class="form-control" placeholder="Mobile">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <button type="submit">Register For Demo</button>
+                    </div>
+                    
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+    <!--contact us end from here-->
+
+    <!--course certification start from here-->
+    <section class="container" id="certificate">
+        <div class="row mx-md-5">
+            <div class="col-12 col-lg-7">
+                <h4>About Hyderabad IT Trainings</h4>
+                <p>Hyderabad IT Trainings Offers Job oriented Python full stack developer Course in Hyderabad. 
+                    Our Python full stack developer course content created by industry experts to full fill industry
+                     expectations. Such detailed Python full stack developer course helped our students to secure job 
+                     in various MNCs. The trainers at Hyderabad IT Trainings are subject specialist and corporate 
+                     professionals providing in-depth training on Python full stack. We are one of best Python full
+                      stack developer training institutes in Hyderabad.
+                </p>
+            </div>
+            <div class="col-12 col-lg-5">
+                <img class="container-fluid" src="https://hyderabadittrainings.com/images/certificate-1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--course certification end from here-->
+
+    <!--carriculum start from here-->
+    <section class="container-fluid py-5" id="curriculum">
+        <div class="container">
+            <div class="row mx-md-5">
+                <div class="col-12 col-lg-6">
+                    <h4>Curriculum</h4>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fa fa-hand-o-right pe-4"></i> HTML & HTML 5
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <li>What is website</li>
+                                <li>Types of Webpages</li>
+                                <li>Static Webpage</li>
+                                <li>Dynamic Webpage</li>
+                                <li>Types Of Languages</li>
+                                <li>Programming Languages</li>
+                                <li>Scripting Languages</li>
+                                <li>Introduction To HTML</li>
+                                <li>What is Doctype?</li>
+                                <li>HTML Editors</li>
+                                <li>Structure Of HTML</li>
+                                <li>HTML Headings</li>
+                                <li>HTML Paragraphs</li>
+                                <li>HTML Basic Tags</li>
+                                <li>HTML Elements</li>
+                                <li>HTML Attributes</li>
+                                <li>HTML Formatting</li>
+                                <li>HTML Quotations</li>
+                                <li>HTML Images</li>
+                                <li>HTML Fonts</li>
+                                <li>HTML Styles</li>
+                                <li>HTML Span</li>
+                                <li>HTML Comments</li>
+                                <li>HTML Colors</li>
+                                <li>HTML Links</li>
+                                <li>HTML Favicon</li>
+                                <li>HTML Tables</li>
+                                <li>HTML Lists</li>
+                                <li>HTML Block & Inline</li>
+                                <li>HTML Marquee</li>
+                                <li>HTML Classes</li>
+                                <li>HTML Id</li>
+                                <li>HTML Iframes</li>
+                                <li>HTML File Paths</li>
+                                <li>HTML Head</li>
+                                <li>HTML Meta</li>
+                                <li>HTML Computercode</li>
+                                <li>HTML Semantics</li>
+                                <li>HTML Entities</li>
+                                <li>HTML Symbols</li>
+                                <li>HTML Emojis</li>
+                                <li>HTML Forms</li>
+                                <li>HTML Form Attributes</li>
+                                <li>HTML Form Elements</li>
+                                <li>HTML Input Types</li>
+                                <li>HTML Input Attributes</li>
+                                <li>HTML Input Form Attributes</li>
+                                <li>HTML New Structure</li>
+                                <li>HTML Canvas</li>
+                                <li>HTML SVG</li>
+                                <li>HTML Picture, Map</li>
+                                <li>HTML Media</li>
+                                <li>HTML Video</li>
+                                <li>HTML Audio</li>
+                                <li>HTML YouTube</li>
+                                <li>HTML Geolocation</li>
+                                <li>Messagaing app's Integration</li>
+                                <li>Code auto genate tools</li>
+                                <li>HTML Layout Design</li>
+                                <li>Webpage Live Implementation.</li>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fa fa-hand-o-right pe-4"></i> CSS & CSS 3
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <li>Introduction CSS</li>
+                                <li>Types of CSS</li>
+                                <li>CSS Selectors</li>
+                                <li>Class Selectors</li>
+                                <li>ID Selector</li>
+                                <li>Tag Selector</li>
+                                <li>Universal Selector</li>
+                                <li>Grouping selector</li>
+                                <li>Attribute Selector</li>
+                                <li>Child Selector</li>
+                                <li>CSS Properties</li>
+                                <li>Type Properties</li>
+                                <li>CSS Comments</li>
+                                <li>CSS Colors</li>
+                                <li>Background Properties</li>
+                                <li>CSS Margins & Padding   </li>
+                                <li>Box Properties</li>
+                                <li>CSS Links</li>
+                                <li>CSS Tables</li>
+                                <li>CSS Display</li>
+                                <li>CSS Flex</li>
+                                <li>List Properties</li>
+                                <li>Border & Outline Properties</li>
+                                <li>Positioning Propeties</li>
+                                <li>CSS Layers</li>
+                                <li>CSS Overflow</li>
+                                <li>CSS Float</li>
+                                <li>CSS Inline-block</li>
+                                <li>CSS Align</li>
+                                <li>CSS Pseudo-class</li>
+                                <li>CSS Pseudo-element</li>
+                                <li>First-line and First-letter selector</li>
+                                <li>Before and After Selector</li>
+                                <li>Realtime Implementation</li>
+                                <li>Converstion of Table CSS Layout</li>
+                                <li>CSS Menu Design (Horizontal, Vertical)</li>
+                                <li>Form Designing</li>
+                                <br>
+                                <li><b>Introduction CSS 3</b></li>
+                                <li>New CSS 3 Selectors</li>
+                                <li>Adjacent Sibling Selector</li>
+                                <li>General Sibling Selector</li>
+                                <li>Rounded Corners</li>
+                                <li>Multiple backgrounds</li>
+                                <li>Border Images</li>
+                                <li>Colors</li>
+                                <li>Gradients</li>
+                                <li>Box Shadows</li>
+                                <li>CSS Web Fonts</li>
+                                <li>Custom Fonts</li>
+                                <li>Text-Shadow Property</li>
+                                <li>Text-Stroke Property</li>
+                                <li>Opacity Property</li>
+                                <li>Transition effect</li>
+                                <li>CSS 2D Transforms</li>
+                                <li>CSS 3D Transforms</li>
+                                <li>Transform effect</li>
+                                <li>Animation effects</li>
+                                <li>Css Media Queries</li>
+                                <li>Using CSS3 in Practical Layout</li>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fa fa-hand-o-right pe-4"></i> Java Script
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <li>Introduction Java Script</li>
+                                <li>Javascript Types</li>
+                                <li>JS Syntax</li>
+                                <li>JS Statements</li>
+                                <li>JS Output</li>
+                                <li>JS Comments</li>
+                                <li>Variables in JS</li>
+                                <li>Operators in JS</li>
+                                <li>Conditions Statements</li>
+                                <li>JS If Else</li>
+                                <li>JS Switch</li>
+                                <li>Java Script Loops</li>
+                                <li>JS Popup Boxes</li>
+                                <li>JS Events</li>
+                                <li>JS Objects</li>
+                                <li>JS Functions</li>
+                                <li>Exception Handling</li>
+                                <li>JS String Methods</li>
+                                <li>JS Numbers</li>
+                                <li>JS Array Methods</li>
+                                <li>JS Dates</li>
+                                <li>JS Math</li>
+                                <li>JS RegExp</li>
+                                <li>Using Java Script in Realtime</li>
+                                <li>Validation of Forms</li>
+                                <li>Related Examples</li>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingfour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                <i class="fa fa-hand-o-right pe-4"></i> Bootstrap
+                              </button>
+                            </h2>
+                            <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <li>Intoduction to Bootstrap</li>
+                                <li>Bootstrap Installation</li>
+                                <li>Containers</li>
+                                <li>Grid Basic</li>
+                                <li>Typography</li>
+                                <li>Colors</li>
+                                <li>Tables</li>
+                                <li>Images</li>
+                                <li>Jumbotron</li>
+                                <li>Alerts</li>
+                                <li>Buttons</li>
+                                <li>Button Groups</li>
+                                <li>Badges</li>
+                                <li>Progress Bars</li>
+                                <li>Spinners</li>
+                                <li>Pagination</li>
+                                <li>List Groups</li>
+                                <li>Cards</li>
+                                <li>Dropdowns</li>
+                                <li>Collapse</li>
+                                <li>Navs</li>
+                                <li>Navbar</li>
+                                <li>Forms</li>
+                                <li>Inputs</li>
+                                <li>Input Groups</li>
+                                <li>Custom Forms</li>
+                                <li>Carousel</li>
+                                <li>Modal</li>
+                                <li>Tooltip</li>
+                                <li>Popover</li>
+                                <li>Toast</li>
+                                <li>Scrollspy</li>
+                                <li>Utilities</li>
+                                <li>Flex</li>
+                                <li>Icons</li>
+                                <li>Media Objects</li>
+                             </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingfive">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                <i class="fa fa-hand-o-right pe-4"></i> JQuery
+                              </button>
+                            </h2>
+                            <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <li>Introduction to jQuery</li>
+                                <li>jQuery FeaturesjQuery Features</li>
+                                <li>Installing jQuery</li>
+                                <li>jQuery Syntax</li>
+                                <li>jQuery Ready Function</li>
+                                <li>jQuery Selectors</li>
+                                <li>jQuery Actions</li>
+                                <li>jquery Events</li>
+                                <li>jQuery UI</li>
+                                <li>Working with jQueryUI</li>
+                                <li>jQuery Accordions</li>
+                                <li>jQuery Tabs</li>
+                                <li>jQuery Tooltips</li>
+                                <li>jQuery Autocomplete</li>
+                                <li>Date Picker</li>
+                                <li>Menu</li>
+                                <li>Dialog Box</li>
+                                <li>jQuery plugins</li>
+                                <li>jQuery Validation plugin</li>
+                                <li>jQuery Slideshow</li>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingsix">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                <i class="fa fa-hand-o-right pe-4"></i> Web Hosting
+                              </button>
+                            </h2>
+                            <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                               <li>Web Hosting Basics</li>                    
+                               <li>Types of Hosting Packages</li>                    
+                               <li>Registering domains</li>                    
+                               <li>Defining Name Servers</li>                    
+                               <li>Using Control Panel</li>                    
+                               <li>Creating Emails in Cpanel</li>                    
+                               <li>Using FTP Client</li>                    
+                               <li>Maintaining a Website</li>                    
+                                </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingseven">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                                <i class="fa fa-hand-o-right pe-4"></i> React JS
+                              </button>
+                            </h2>
+                            <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                               <h6><b>Introduction to ES5 & ES6</b></h6> 
+                               <li>ES5</li>                    
+                               <li>ES6</li>                    
+                               <li>ES5 VS ES6</li>                    
+                               <li>ES5 VS ES6 Syntax Difference</li>                    
+                               <li>ES6 Advantages</li> 
+                               <br>
+                               <h6><b>What is ReactJS?</b></h6> 
+                               <li>ReactJS Introduction</li>                  
+                               <li>Advantages of ReactJS</li>                  
+                               <li>Workflow of ReactJS</li>                  
+                               <li>Scope of ReactJS</li>   
+                               <br>
+                               <h6><b>Overview of JSX</b></h6> 
+                               <li>Difference between JS and JSX.</li>            
+                               <li>React Components overview</li>            
+                               <li>What is Child Components?</li>            
+                               <li>What is JSX expressions?</li> 
+                               <br>
+                               <h6><b>ReactJS Environment Setups</b></h6> 
+                               <li>Node setup</li>            
+                               <li>How to use NPM?</li>            
+                               <li>How to create package.json and purpose of it?</li>            
+                               <li>Best IDE for ReactJS and How to write optimized code in ReactJS?</li>           
+                               <li>ReactJS browser plugins overview.</li>      
+                               <br>
+                               <h6><b>Building Blocks of React.JS</b></h6>
+                               <li>Core Building Blocks of React</li>     
+                               <li>Components</li>     
+                               <li>State and Props</li>     
+                               <li>Rendering</li>     
+                               <li>What is JSX</li>     
+                               <li>Example</li>     
+                               <li>Why JSX</li>     
+                               <li>Advantages of JSX</li>     
+                               <li>Expressions in JSX</li>     
+                               <li>Internal Implementation of JSX</li>     
+                               <li>Hands-on: Creating a react component with jsx</li> 
+                               <br>
+                               <h6><b>Components in React JS</b></h6>    
+                               <li>What are Components in React JS</li>
+                               <li>Types of Components</li>
+                               <li>Functional component</li>
+                               <li>Class Component</li>
+                               <li>Functional component vs Class Component</li>
+                               <li>Creating Class Components</li>
+                               <li>Creating Functional Components</li>
+                               <li>Converting Functional Components to Class Components</li>
+                               <br>
+                               <h6><b>Conditional Rendering</b></h6>
+                               <li>Conditional Rendering in React JS</li> 
+                               <li>Logical && Operator</li> 
+                               <li>Switch case operator</li> 
+                               <br>
+                               <h6><b>List & Keys</b></h6>
+                               <li>react key prop</li>
+                               <li>map function to iterate the List</li>
+                               <li>References</li>
+                               <li>When to use Refs</li>
+                               <li>How to Create Refs</li>
+                               <li>How to access Refs</li>
+                               <br>
+                               <h6><b>Event Binding types</b></h6>
+                               <li>Bind () method</li>
+                               <li>Arrow function</li>
+                               <li>Arrow function inside the expression</li>
+                               <li>Arrow function inside the expression with parameter</li>
+                               <br>
+                               <h6><b>ReactJS Component Life Cycles Overview</b></h6>
+                               <li>Constructor</li>
+                               <li>Render</li>
+                               <li>Should component update</li>
+                               <li>Component willMount</li>
+                               <li>Component didMount</li>
+                               <li>Component Unmount</li>
+                               <br>
+                               <h6><b>Advance Topics in React JS</b></h6>
+                               <li>What is context API?</li>
+                               <li>When to use the context API</li>
+                               <li>How to use the Context API</li>
+                               <li>Fragments</li>
+                               <li>Why we use Fragments?</li>
+                               <li>Fragments short Syntax</li>
+                               <li>Keyed Fragments</li>
+                               <br>
+                               <h6><b>ReactJS forms and UI</b></h6>
+                               <li>Lists of Form components.</li>
+                               <li>Setup Controlled and Uncontrolled form components.</li>
+                               <li>Control Input elements.</li>
+                               <li>How to set default values on all formats of Input elements.</li>
+                               <li>ReactJS Form validations.</li>
+                               <li>How to write Styles?</li>
+                               <li>Animations overview</li>
+                               <br>
+                               <h6><b>Routing in ReactJS and Other JS concepts</b></h6>
+                               <li>Single Page Application Overview.</li>
+                               <li>How to configure React Router?</li>
+                               <li>History of Router</li>
+                               <li>How to Handle Conditional statement in JSX?</li>
+                               <li>IIFE in JSX for complex logic overview.</li>
+                               <br>
+                               <h6><b>Styles in ReactJS?</b></h6>
+                               <li>CSS and inline styles in ReactJS overview.</li>
+                               <li>Introduction to styled components</li>
+                               <li>Bootstrap & React Bootstrap</li>
+                               <li>Font Awesome and Material UI Icons</li>
+                               <br>
+                               <h6><b>Router with Navigation</b></h6>
+                               <li>How to Load the router library?</li>
+                               <li>Configure the React Router?</li>
+                               <li>How to Pass and receive parameters?</li>
+                               <li>Invalid URL (404 page).</li>
+                               <br>
+                               <h6><b>Hooks</b></h6>
+                               <li>Introduction to Hooks</li>
+                               <li>The useState hook</li>
+                               <li>useEffect hook</li>
+                               <li>useHistory hook</li>
+                               <li>The useContext hook</li>
+                               <li>The useReducer hook</li>
+                               <li>Another Hooks</li>
+                               <br>
+                               <h6><b>Redux Overview</b></h6>  
+                               <li>Introduction to One Store.</li>  
+                               <li>Provider Component</li>  
+                               <li>Actions.</li>  
+                               <li>Reducers.</li>  
+                               <li>Dispatchers</li>  
+                               <li>View Controllers</li>  
+                               <br>
+                               <h6><b>Projects</b></h6> 
+                               <li>Single page Static Website</li>
+                               <li>Application with CRUD Operations</li>
+                               <li>Deploying</li>
+                              </div>
+                            </div>
+                          </div>
+                          
+                      </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h4>Demo video</h4>
+                    <iframe width="450" height="315" 
+                    src="https://www.youtube.com/embed/DNOGn0DU76k?si=Rv5GTsOpO6QljV8o" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!--carriculum start from here-->
+
+    <!-- approach part start from here -->
+
+    <section class="container-fluid pt-4 pb-5" id="approach">
+    <div class="container ">
+        <h3 class="text-center">Our Training<span class="color"> Approach</span></h3>
+        <div class="row mx-md-5 mt-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <figure class="text-center">
+                    <img src="assests/approach/earth.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Theory</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <figure class="text-center">
+                    <img src="assests/approach/work.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2"> Project Work</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <figure class="text-center">
+                    <img src="assests/approach/assigment.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Assignments</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/medal.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Certification</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/resume-1.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Resume Preparation</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/interview.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Interview Preparation</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img id="img-size" src="assests/approach/resume marketting.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Resume Marketing</h2>
+                   </figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+                <figure class="text-center">
+                    <img src="assests/approach/job-interview.png" alt="">
+                   <figcaption>
+                    <h2 class="py-2">Placement Support</h2>
+                   </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div> 
+    </section>
+
+    <!-- approach part end from here -->
+
+    <!-- review part start from here -->
+
+
+    <section class="container-fluid py-5" id="review">
+        <h4 class="text-center mb-5">Reviews</h4>
+    <div class="container">
+        <div class="row mx-md-5 px-3">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Good place for Python fullstack developer course in Hyderabad withplacement
+                         support had enrolled for Python Full stack course andTrainer helped to clear my queries. Overall experience
+                          was very nice.Thank you very much Sir and entire Team.
+                    </p>
+                    <p>Siva Jyothi</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Best institute for learning Python fullstack course in madhapurespecially for 
+                        freshers. The trainer is good and has good experience and ateaching skills. They also provide placements. 
+                        Hyderabad IT Trainings isa Python full stack developer training institute for learning Python fullstack 
+                        developer course with live projects.
+                    </p>
+                    <p>PAmar Rao</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Good place for Python fullstac Training in Hyderabad with placementsupport 
+                        had enrolled for Python full stack developer course andTrainer helped to clear my queries. Overall 
+                        experience was very nice.Thank you very much Sir and entire Team.
+                   </p>
+                   <p>Shravani Allumalla</p>
+                </div>
+                <div class="item">
+                    <p> <i class="fa fa-quote-right"></i> I had enrolled for Python fullstack developer Course with HyderabadT 
+                        Trainings. It was a great experience. Trainer gave additional exercisesto practice which made the whole 
+                        process very simple. I highlyrecommend Hyderabad IT Trainings to anybody wanting to learn Pythonfull 
+                        stack developer Course in Hyderabad
+                    </p>
+                    <p>Rekha Tadiboina</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Hyderabad IT Trainings provides you with the best Python fullstackdeveloper
+                         course and they cover all areas with details. The online classesare very interactive and the trainers are 
+                         market intluencers so thesessions are really insightful. If you are looking for a Python full stackdeveloper
+                          online training then you should definitely choose HyderabadIT Trainings.
+                    </p>
+                    <p>YSK</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Before of thisI joined 2 institues for learning Python fullstackdeveloper
+                         course what i am expecting their are not giving that much,every thing their r telling normal way like simple
+                          commonly otherinstitues doing,teaching.But the way of teaching this institue is fullydifferent from others
+                           For IDENTIFYING BEST one which is completlydifferent from other institues,i take 6 months of time and it 
+                           changes my life
+                   </p>
+                   <p>Kavya T</p>
+                </div>
+                <div class="item">
+                    <p><i class="fa fa-quote-right"></i> Good place for Python fullstack developer course in Hyderabad withplacement
+                         support I had enrolled for Python Full stack course andTrainer helped to clear my queries. Overall experience
+                          was very nice.Thank you very much Sir and entire leam
+                    </p>
+                    <p>Mohammad Khalida Parveen</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!-- review part end from here -->
+
+    <!-- accordion part start from here -->
+
+    <section class="container py-5" id="Frequently-Asked-Questions">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="row mx-md-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa fa-file pe-4"></i> UI Development Course Introduction
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>UI stands for User Interface. UI development is a front end development technology used for creating 
+                            graphical interfaces and user interfaces. Some of the important features are SPA (Single Page Application),
+                             consistency, server side backend programming, and easy-to-use capabilities. These graphical interfaces
+                              and user interfaces can be designed and developed by using HTML, CSS, Bootstrap, JavaScript, JQuery,
+                               ReactJS.</p>
+                        <p>The Hyderabad IT Trainings is one of the best UI Development training institutes in Hyderabad. 
+                            We have highly experienced professionals with years of industry experience, and they offer a 
+                            differentiated learning environment. Our syllabus includes data types, variables, operators, 
+                            control structures, rapid web development and UI components</p>     
+                        <p>Our UI Development training classes are usually offered in weekdays and weekends (flexible timings). 
+                                We offer both UI Development classroom courses and the UI Development online course, which are 
+                                scheduled based on the student’s specified preferred time slot.</p>   
+                        <p>With our UI Development course, you'll get the best training and land your dream job. 
+                                    We're affordable and provide the best learning experience in UI Development course in Hyderabad.</p>
+                        <p><b>Learn UI Developer & Become JOB Ready</b></p>
+                        <p><i class="fa fa-file pe-4"></i> 100% Placement assistance</p>
+                        <p><i class="fa fa-file pe-4"></i>Learn UI Developer Course from 10+ years Experienced Industry experts.</p>
+                        <p><i class="fa fa-file pe-4"></i>LAB Facility to create beautiful websites by using UI technologies.</p>
+                        <p><i class="fa fa-file pe-4"></i>Training with 5 Real Time Projects</p>
+                        <p><i class="fa fa-file pe-4"></i>Get UI Development Authorized Certification.</p>
+                        <p><i class="fa fa-file pe-4"></i>Resume & Interviews Preparation Support</p>
+                        <p><b>For the detailed UI Development course syllabus, please check below.</b></p>
+                        <p><i class="fa fa-file pe-4"></i> HTML: HTML is a text markup language that form the basic blocks for web pages. HTML has tags inside it to show text or graphics.</p>
+                        <p><i class="fa fa-file pe-4"></i>CSS: Cascading Style Sheets are called CSS. It simplifies the process of a web page and UIs and is an important component in UI development courses in Hyderabad.</p>
+                        <p><i class="fa fa-file pe-4"></i>JAVASCRIPT: Developers use JAVASCRIPT and JQuery to create sites or UIs. These languages, when used together, can be invaluable for creating a successful site.</p>
+                        <p><i class="fa fa-file pe-4"></i>Bootstrap</p>
+                        <p><i class="fa fa-file pe-4"></i>React JS</p>
+                        <p><b>Why choose us for UI Development training?</b></p>
+                        <p>With Our UI Developer course, you get to learn UI skills and pursue the class according to your availability.
+                             The faculty who has 10+ years of experience in web development will be teaching you, so you know that
+                              the expertise level is high.</p>
+                        <p>After UI Developer training, our students are eligible for placement and we help them find work.
+                             We offer real-world UI development experience by helping them work with a variety of clients from
+                              the moment they start training. Hyderabad IT Trainings provides UI Development Training in Hyderabad 
+                              that is designed specifically for aspiring candidates.</p>
+                        <p>We at Hyderabad IT Trainings follow the current industry standards for your UI web development courses in 
+                            Hyderabad, which will be extremely beneficial for our trainees. Our experienced UI developers will teach
+                             you everything about UI development and then assist you in implementing these ideas on your own projects.</p>
+                        <p><b>Career Opportunities in UI Development:</b></p>
+                        <p>The UI Development course at Hyderabad IT Trainings is the best institute for UI Developers. 
+                            The program is comprehensive, and we strive to provide our students with all the most consequential 
+                            understanding of UI Development. On completion of this UI Developer course, you will be able to land
+                             any type of job in a huge market such as UI Developer, Frontend Developer, UI Designer, Web Designer etc.
+                            </p>
+                     </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa fa-file pe-4"></i> UI Development Classroom Training
+
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Hyderabad IT Trainings’s professional UI Development classroom training offers you the best learning 
+                        experience in frontned technologies from basics to advance level concepts. By the end of the Python 
+                        course at Hyderabad IT Trainings, you will have gained a real-time experience. We offer 100% placement
+                         support after the completion of the UI Development Classroom Training in Hyderabad.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="fa fa-file pe-4"></i> UI Development Online Training
+
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Enroll for the UI Development Online Training at Hyderabad IT Trainings to get proficient in the basic and
+                         necessary concepts of the UI Development. Upon completing the UI Developer course, students have good 
+                         knowledge of the UI development. Join the UI Developer Course online at Hyderabad IT Trainings and possess
+                          solid foundational skills in Frontend development.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingfour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                          <i class="fa fa-file pe-4"></i> What are the Prerequisites for UI Development Training?
+                      </button>
+                    </h2>
+                    <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        There are no particular pre-requisites to join for our Advance level UI Development course.              
+                     </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingfive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                          <i class="fa fa-file pe-4"></i> What is the UI Developer Course fee in Hyderabad?
+                      </button>
+                    </h2>
+                    <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        UI Developer course fee in Hyderabad varies from institute to institute depending on the Training Quality 
+                        & course structure. The average UI Development course fee starts from 12, 000/- onwards.            
+                    </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingsix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                          <i class="fa fa-file pe-4"></i> What are the skills I have to learn to become a Ul developer?
+                      </button>
+                    </h2>
+                    <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        You need to learn HTML, CSS, Bootstrap, Javascript, JQuery, React Js and UI tools.                
+                         </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingseven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                          <i class="fa fa-file pe-4"></i> What is the eligibility to learn a UI developer Course?
+                      </button>
+                    </h2>
+                    <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        To learn a UI developer Course or frontend development Course, you do not need any specific qualifications.
+                         But a minimum graduation is required, If any coding knowledge is an extra advantage.                  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingeight">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+                          <i class="fa fa-file pe-4"></i> What are the Career Opportunities of UI developers?
+                      </button>
+                    </h2>
+                    <div id="collapseeight" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        The demand for good UI Developers in India is increasing every day. All Software Companies are looking for
+                         people who can build great UI.                 
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+    <!-- accordion part start from here -->
+
+    <!--contact us start from here-->
+    <section class="container-fluid py-5" id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-8 mx-auto">
+                <h3>Still Hunting for a Python Fullstack Developer Job in Hyderabad?</h3>
+            </div>
+            <div class="col-12 col-sm-7 mx-auto">
+                <h5>All you need is Learn Courses from Industry Expert with Hyderabad IT Trainigs</h5>
+            </div>
+        </div>
+        <form action="">
+            <div class="row mx-md-5">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <input type="text" name="text" id="" class="form-control" placeholder="Name">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <input type="email" name="text" id="" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <input type="tel" name="text" id="" class="form-control" placeholder="Mobile">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <button type="submit">Register For Demo</button>
+                </div>
+                
+            </div>
+        </form>
+        </div>
+    </div>
+    </section>
+    <!--contact us end from here-->
+
+    <!-- alimni-working-place part start from here -->
+    <section class="container py-5" id="alumni-working-place">
+        <h2 class="text-center">Our Alumni Work At</h2>
+        <div class="row mx-md-5">
+            <img src="https://hyderabadittrainings.com/images/amazon.png" alt="">
+        </div>
+    </section>
+    <!-- alimni-working-place part start from here -->
+
+    <!-- related courses part start from here -->
+    <section class="container-fluid py-5" id="related-courses">
+        <div class="container">
+            <div class="row mx-md-5">
+                <h2>Related Courses</h2>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href="python-fullstack-developer-course-hyderabad.html"><img src="https://hyderabadittrainings.com/images/course/python%20(1).jpg" alt=""></a>
+                        <figcaption>
+                            <a href="python-fullstack-developer-course-hyderabad.html">PHP with MySQL</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href="mern-fullstack-developer-course-hyderabad.html"><img src="https://hyderabadittrainings.com/images/course/full-stack-dev.webp" alt=""></a>
+                        <figcaption>
+                            <a href="mern-fullstack-developer-course-hyderabad.html">MERN Full Stack Developer</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href=""><img src="https://hyderabadittrainings.com/images/course/phpmysql.webp" alt=""></a>
+                        <figcaption>
+                            <a href="">PHP with MySQL</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <figure>
+                        <a href=""><img src="https://hyderabadittrainings.com/images/course/python%20(2).jpg" alt=""></a>
+                        <figcaption>
+                            <a href="">UI/UX Designing</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- related courses part end from here -->
+
+
+    <footer class="container-fluid pb-4" id="foot">
+      <div class="container">
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 pe-4">
+            <h4>Hyderabad IT Trainings</h4>
+            <p>
+              Hyderabad IT Trainings offers an excellent Software courses
+              training with end to end support to the candidates. We offer MERN
+              Full stack, Python Fullstack, React JS, UI Development, Web/UI
+              Designing & Web Development.
+            </p>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 ps-2">
+            <h4>Quick Links</h4>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="student_registration.html">Registration</a>
+            </div>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="courses.html">All Courses</a>
+            </div>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="privacy_policy.html">Privacy policy</a>
+            </div>
+            <div class="sociall">
+              <i class="bi bi-arrow-right"></i
+              ><a href="refund_policy.html">Refund Policy</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 ps-2">
+            <h4>Reach Us</h4>
+            <div class="sociall">
+              <i class="bi bi-house"></i>
+              <p class="ps-4">
+                House No 40, Third Floor <br />
+                Vittalrao Nagar <br />
+                Madhapur <br />
+                Hitech City Main Rd <br />
+                Hyderabad <br />
+                Telangana 500081
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pt-5 ps-2">
+            <h4>Contact Us</h4>
+            <div class="sociall">
+              <i class="fa fa-phone"></i>
+              <h6>+91 95065 19510</h6>
+            </div>
+            <div class="sociall">
+              <i class="fa regular fa-envelope"></i>
+              <h6>danish0ahmad@gmail.com</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <section class="container-fluid" id="copy-right">
+      <div class="container py-4">
+        <div class="row mx-md-5">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-9">
+            <h6>
+              © Copyrights 2023 @ Hyderabad IT Trainings - MERN Python Fullstack
+              | UI Development UI UX Design Institute in Hyderabad All rights
+              reserved.
+            </h6>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+            <h6 class="text-center">
+              Designed by
+              <span class="color bg-danger p-3 rounded text-white"
+                >Mohd Danish
+              </span>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jquery/owl-Carouser/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:40,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:2
+        }
+    }
+});
+    </script>
+  </body>
+</html>
